@@ -101,17 +101,18 @@ img {
 /* Country */
 
 .country {
-  padding-top: 65px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .country__name {
   font-size: 32px;
+  margin: 0 15px;
 }
 .country__flag {
   max-height: 40px;
   max-width: 80px;
+  margin: 0 15px;
 }
 
 /* Cards */
@@ -189,6 +190,7 @@ img {
 /* Country Picker */
 
 .country-picker {
+  padding: 40px 0;
   color: red;
 }
 .country-picker__select {
