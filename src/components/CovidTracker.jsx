@@ -23,8 +23,8 @@ const CovidTracker = () => {
 
     return(
         <div>
-            {global && selectedCountry && <Cards globalData={global} selectedCountry={selectedCountry} countryName={country} />}
             {global && selectedCountry && <Country globalData={global} selectedCountry={selectedCountry} countryName={country} />}
+            {global && selectedCountry && <Cards globalData={global} selectedCountry={selectedCountry} countryName={country} />}
             {allCountry && <CountryPicker onChanged={handleSelectCountry} countryData={allCountry}/>}
             {global && selectedCountry && <Chart globalData={global} selectedCountry={selectedCountry} countryName={country} />}
         </div>
