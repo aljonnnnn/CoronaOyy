@@ -15,7 +15,7 @@ const CovidTracker = () => {
     // {allCountry && console.log(allCountry)}
     // {selectedCountry && console.log(selectedCountry)}
 
-    console.log(country)
+    // console.log(country)
 
     const handleSelectCountry = (e) => {
         setCountry(e.target.value)
@@ -26,7 +26,7 @@ const CovidTracker = () => {
             {global && selectedCountry && <Cards globalData={global} selectedCountry={selectedCountry} countryName={country} />}
             {global && selectedCountry && <Country globalData={global} selectedCountry={selectedCountry} countryName={country} />}
             {allCountry && <CountryPicker onChanged={handleSelectCountry} countryData={allCountry}/>}
-            <Chart />
+            {global && selectedCountry && <Chart globalData={global} selectedCountry={selectedCountry} countryName={country} />}
         </div>
     )
 }

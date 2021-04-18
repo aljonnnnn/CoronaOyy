@@ -209,3 +209,12 @@ img {
 .chart {
   padding: 40px 0;
 }
+.chart .container {
+  width: 70%;
+}
+
+@media (max-width: 575px) {
+  .chart .container {
+    width: 98%;
+  }
+}
