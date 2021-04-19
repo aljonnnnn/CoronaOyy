@@ -1,4 +1,4 @@
-import globalICon from '../global.svg'
+import globalICon from '../img/global.svg'
 
 const Country = ({globalData, selectedCountry: {country, countryInfo }, countryName}) => {
     // console.log(globalData)

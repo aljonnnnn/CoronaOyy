@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import Cards from "./Cards"
-import Chart from "./Chart"
-import Country from "./Country"
-import CountryPicker from "./CountryPicker"
-import useFetch from "../API/useFetch"
+import Cards from "../Cards"
+import Chart from "../Chart"
+import Country from "../Country"
+import CountryPicker from "../CountryPicker"
+import useFetch from "../../API/useFetch"
 
 const CovidTracker = () => {
     const [country, setCountry] = useState();
@@ -22,12 +22,12 @@ const CovidTracker = () => {
     }
 
     return(
-        <div>
+        <main className='main'>
             {global && selectedCountry && <Country globalData={global} selectedCountry={selectedCountry} countryName={country} />}
             {global && selectedCountry && <Cards globalData={global} selectedCountry={selectedCountry} countryName={country} />}
             {allCountry && <CountryPicker onChanged={handleSelectCountry} countryData={allCountry}/>}
             {global && selectedCountry && <Chart globalData={global} selectedCountry={selectedCountry} countryName={country} />}
-        </div>
+        </main>
     )
 }
 
