@@ -35,6 +35,34 @@ img {
     max-width: 100%;
 }
 
+.loading-container {
+  min-height: 100vh;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading {
+  width: 60px;
+  height: 60px;
+  border-top: 5px solid #EE6161;
+  border-radius: 50%;
+  /* transform: rotate(45deg); */
+  margin: 0 auto;
+  animation: loading infinite 1s ease-in-out;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .container {
   max-width: 1260px;
   padding: 0 15px;
