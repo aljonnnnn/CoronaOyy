@@ -398,3 +398,71 @@ img {
     margin-bottom: 30px;
   }
 }
+
+/* AboutSymptoms */
+.AboutSymptoms {
+  padding: 100px 0;
+}
+.AboutSymptoms__heading-title {
+  font-size: 32px;
+  font-weight: 400;
+  color: #0f0f0f;
+  text-align: center;
+  position: relative;
+  margin-bottom: 79px;
+}
+.AboutSymptoms__heading-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: #EE6161;
+}
+.AboutSymptoms__container {
+  max-width: 579px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.AboutSymptoms__flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.AboutSymptoms__box {
+    padding: 0 35px;
+}
+.AboutSymptoms__box:not(:last-child) {
+  margin-bottom: 70px;
+}
+.AboutSymptoms__item {}
+.AboutSymptoms__img {
+  display: block;
+  margin-bottom: 8px;
+}
+.AboutSymptoms__title {
+  display: block;
+  text-align: center;
+}
+
+@media (max-width: 992px ) {
+}
+@media (max-width: 575px ) {
+  .AboutSymptoms__box {
+    padding: 0 30px;
+  }
+  .AboutSymptoms__box:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 365px ) {
+  .AboutSymptoms__box {
+    padding: 0 20px;
+  }
+}
