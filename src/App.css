@@ -381,21 +381,18 @@ img {
 }
 
 @media (max-width: 992px) {
+  .AboutAbout__box {
+    width: 100%;
+  }
+  .AboutAbout__box:first-child {
+    margin-bottom: 30px;
+  }
   .AboutAbout__heading-title {
     font-size: 24px;
     margin-bottom: 25px;
   }
   .AboutAbout__paragraph:nth-child(2) {
     margin-bottom: 10px;
-  }
-}
-
-@media (max-width: 575px) {
-  .AboutAbout__box {
-    width: 100%;
-  }
-  .AboutAbout__box:first-child {
-    margin-bottom: 30px;
   }
 }
 
@@ -466,3 +463,116 @@ img {
     padding: 0 20px;
   }
 }
+
+/* AboutYoutube */
+.AboutYoutube {
+  padding: 100px 0;
+}
+.AboutYoutube__container {
+  max-width: 813px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.AboutYoutube__heading-title {
+  font-size: 32px;
+  font-weight: 400;
+  color: #0f0f0f;
+  text-align: center;
+  position: relative;
+  margin-bottom: 79px;
+}
+
+.AboutYoutube__heading-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: #EE6161;
+}
+
+.AboutYoutube__video {
+  width: 100%;
+  height: 458px;
+}
+
+@media (max-width: 575px ) {
+  .AboutYoutube__video {
+    width: 100%;
+    height: 220px;
+  }
+}
+
+
+.AboutAccordion {
+  padding: 100px 0;
+}
+.AboutAccordion__container {
+  max-width: 586px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.AboutAccordion__heading-title {
+  font-size: 32px;
+  font-weight: 400;
+  color: #0f0f0f;
+  text-align: center;
+  position: relative;
+  margin-bottom: 79px;
+}
+.AboutAccordion__accordion {
+  background-color: #F8F9FA;
+}
+.AboutAccordion__accordion:not(:last-child) {
+  margin-bottom: 15px;
+}
+.AboutAccordion__accordion-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.AboutAccordion__accordion-head.active {
+  background-color: #EE6161;
+}
+.AboutAccordion__accordion-question {
+  font-size: 16px;
+  font-weight: 400;
+  color: #111;
+  padding-right: 15px;
+}
+.AboutAccordion__accordion-question.active {
+  color: #fff;
+}
+.AboutAccordion__accordion-body {
+  padding: 15px;
+  overflow: hidden;
+  display: none;
+}
+.AboutAccordion__accordion-body.active {
+  display: block;
+}
+.AboutAccordion__accordion-answer {
+  font-size: 14px;
+  font-weight: 400;
+  color: #111;
+}
+
+/* .AboutAccordion-heading-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65px;
+  height: 4px;
+  border-radius: 5px;
+  background-color: #EE6161;
+} */
