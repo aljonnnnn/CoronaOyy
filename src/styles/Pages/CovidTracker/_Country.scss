@@ -1,0 +1,17 @@
+.country {
+    padding: 130px 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__name {
+        font-size: 32px;
+        margin: 0 15px;
+    }
+
+    &__flag {
+        max-height: 40px;
+        max-width: 80px;
+        margin: 0 15px;
+    }
+}

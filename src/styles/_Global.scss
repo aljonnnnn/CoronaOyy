@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+/* RESET */
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-family-1;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    /* width: 100%;
+    height: auto; */
+    max-width: 100%;
+}
+
+
+.loading-container {
+    min-height: 100vh;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .loading {
+        width: 60px;
+        height: 60px;
+        border-top: 5px solid $primary-color;
+        border-radius: 50%;
+        margin: 0 auto;
+        animation: loading infinite 1s ease-in-out;
+    }        
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    max-width: 1260px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    @media (max-width: $large) {
+        max-width: 740px;
+    }
+}
+
+
+.text-center {
+text-align: center;
+}

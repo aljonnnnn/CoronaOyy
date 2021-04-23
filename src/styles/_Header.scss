@@ -1,0 +1,45 @@
+.header {
+    background-color: $background-color-2;
+    position: fixed;
+    width: 100%;
+    z-index: 1100;
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    &__logo {
+
+        @media (max-width: $small) {
+            max-width: 133.766px;
+        }
+    }
+    &__menu {}
+
+    &__item {
+        display: inline-block;
+
+        // margin-right: 30px;
+        &:not(:last-child) {
+            margin-right: 30px;
+
+            @media (max-width: $small) {
+                margin-right: 20px;
+            }
+        }
+    }
+    
+    &__link {
+        display: inline-block;
+        font-size: 18px;
+        color: $gray-color-2;
+
+        @media (max-width: $very-small) {
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.AboutAccordion {
+    padding: 100px 0;
+
+    @media (max-width: $small) {
+        padding: 50px 0;
+    }
+
+    &__container {
+        max-width: 586px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+
+    &__heading-title {
+        font-size: 32px;
+        font-weight: 400;
+        color: $heading-color;
+        text-align: center;
+        position: relative;
+        margin-bottom: 79px;
+    }
+
+    &__accordion {
+        background-color: $background-color-2;
+        border-radius: 5px;
+        
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__accordion-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 15px;
+        background-color: $background-color-1;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &.active {
+            background-color: $primary-color;
+        }
+    }
+
+    &__accordion-question {
+        font-size: 16px;
+        font-weight: 400;
+        color: #111;
+        padding-right: 15px;
+
+        &.active {
+            color: $white;
+        }
+    }
+    &__accordion-body {
+        padding: 15px;
+        overflow: hidden;
+        display: none;
+        border-end-end-radius: 5px;
+        border-end-start-radius: 5px;
+        background-color: $background-color-2;
+
+        &.active {
+            display: block;
+        }
+    }
+    &__accordion-answer {
+        font-size: 14px;
+        font-weight: 400;
+        color: $body-color;
+    }
+}

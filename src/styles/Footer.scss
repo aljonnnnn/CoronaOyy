@@ -1,0 +1,9 @@
+.footer {
+    padding: 20px 0;
+
+    &__credits {
+        font-size: 16px;
+        color: $gray-color-1;
+        text-align: center;
+    }
+}

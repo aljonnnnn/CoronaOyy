@@ -20,31 +20,31 @@ const AboutSymtoms = () => {
                     <div className="AboutSymptoms__box">
                         <div className="AboutSymptom__item">
                             <img  className="AboutSymptoms__img" src={icon2} alt="Fever"/>
-                            <span className="AboutSymptoms__title" >Fever</span>
+                            <span className="AboutSymptoms__title" >Cough</span>
                         </div>
                     </div>
                     <div className="AboutSymptoms__box">
                         <div className="AboutSymptom__item">
                             <img  className="AboutSymptoms__img" src={icon3} alt="Fever"/>
-                            <span className="AboutSymptoms__title" >Fever</span>
+                            <span className="AboutSymptoms__title" >Shortness of Breath</span>
                         </div>
                     </div>
                     <div className="AboutSymptoms__box">
                         <div className="AboutSymptom__item">
                             <img  className="AboutSymptoms__img" src={icon4} alt="Fever"/>
-                            <span className="AboutSymptoms__title" >Fever</span>
+                            <span className="AboutSymptoms__title" >Chest Pain</span>
                         </div>
                     </div>
                     <div className="AboutSymptoms__box">
                         <div className="AboutSymptom__item">
                             <img  className="AboutSymptoms__img" src={icon5} alt="Fever"/>
-                            <span className="AboutSymptoms__title" >Fever</span>
+                            <span className="AboutSymptoms__title" >Difficult Breathing</span>
                         </div>
                     </div>
                     <div className="AboutSymptoms__box">
                         <div className="AboutSymptom__item">
                             <img  className="AboutSymptoms__img" src={icon6} alt="Fever"/>
-                            <span className="AboutSymptoms__title" >Fever</span>
+                            <span className="AboutSymptoms__title" >Fatigue</span>
                         </div>
                     </div>
                 </div>

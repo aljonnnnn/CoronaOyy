@@ -115,7 +115,7 @@ img {
 
 @media (max-width: 540px) {
   .header .header__logo {
-  max-width: 133.766px;
+    max-width: 133.766px;
   }
   .header .header__item:not(:last-child) {
     margin-right: 20px;
@@ -137,7 +137,7 @@ img {
 }
 .footer__credits {
   font-size: 16px;
-  color: #39515e;
+  color: #444;
   text-align: center;
 }
 
@@ -385,7 +385,6 @@ img {
 .AboutAbout__paragraph {
   font-size: 16px;
   color: #000;
-
 }
 .AboutAbout__paragraph:nth-child(2) {
   margin-bottom: 25px;

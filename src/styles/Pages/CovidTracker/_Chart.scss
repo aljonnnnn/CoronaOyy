@@ -1,0 +1,11 @@
+.chart {
+    padding: 40px 0;
+
+    .container {
+        width: 70%;
+
+        @media (max-width: $small) {
+            width: 98%;
+        }
+    }
+}

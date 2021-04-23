@@ -1,0 +1,78 @@
+.card {
+    padding-top: 10px;
+    padding-bottom: 30px;
+
+    &__flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    &__box {
+        width: 25%;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        @media (max-width: $large) {
+            width: 50%;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: $small) {
+            width: 100%;
+        }
+    }
+
+    &__item {
+        border-radius: 5px;
+        padding: 20px 20px 25px;
+        box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
+
+        &.yellow {
+            border-bottom: 5px solid $yellow-card ;
+        }
+
+        &.green {
+            border-bottom: 5px solid $green-card ;
+        }
+
+        &.black {
+            border-bottom: 5px solid $black-card ;
+        }
+
+        &.red {
+            border-bottom: 5px solid $red-card ;
+        }
+
+    }
+
+    &__categories {
+        font-size: 20px;
+        color: $gray-color-1;
+        margin-bottom: 15px;
+    }
+
+    &__number {
+        font-size: 42px;
+        font-weight: 400;
+        color: $black;
+        margin-bottom: 5px;
+    }
+    
+    &__today {
+        font-size: 18px;
+        color: $body-color;
+        
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__date {
+        font-size: 18px;
+        color: $gray-color-2;
+    }
+}
