@@ -41,7 +41,7 @@ const Cards = ({globalData, selectedCountry, countryName}) => {
                         <div className="card__item red">
                             <div className="card__category">Cases</div>
                             <h3 className="card__number"><CountUp start={0} end={data.cases ? data.cases : 0} duration={2} separator=","/></h3>
-                            <p className="card__today">Today: <CountUp start={0} end={data.todayCases ? data.todayCases : 0} duration={2} separator=","/></p>
+                            <p className="card__today">Today: +<CountUp start={0} end={data.todayCases ? data.todayCases : 0} duration={2} separator=","/></p>
                             <p className="card__date"><span>{date}</span></p>
                         </div>
                     </div>
