@@ -8,8 +8,10 @@ import { motion } from 'framer-motion'
 
 
 const AboutAbout = () => {
+
     return (
-        <section className="AboutAbout" id='About'>
+        <motion.section 
+            className="AboutAbout" id='About'>
             <div className="container">
                 <div className="AboutAbout__flex">
                     <div className="AboutAbout__box">
@@ -21,8 +23,9 @@ const AboutAbout = () => {
                     </div>
                     <div className="AboutAbout__box">
                         <div className="AboutAbout__item text-center">
-                            <motion.img src={AboutAboutImg} alt=""/>
-                            <motion.img 
+                            <motion.img
+                                src={AboutAboutImg} alt=""/>
+                            <motion.img
                                 initial={{ opacity: 0 , x: 100, rotate: -45}}
                                 animate={{ opacity: 1, x: 0, rotate: 0, transition: { duration: 1}}}
                                 drag 
@@ -94,7 +97,7 @@ const AboutAbout = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
 
