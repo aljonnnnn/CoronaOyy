@@ -59,11 +59,11 @@ const data = [
     },
 ]
 
-const down = <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+const down = <svg className="AboutAccordion__icon" width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 1.11942L8.95692 10.0763L17.9138 1.11942L16.7944 0L8.95692 7.8375L1.11942 0L0 1.11942Z" fill="#111111"/>
             </svg>
 
-const up = <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+const up = <svg className="AboutAccordion__icon" width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 8.88906L9 0L18 8.88906L16.8752 10L9 2.22187L1.1248 10L0 8.88906Z" fill="white"/>
             </svg>
 

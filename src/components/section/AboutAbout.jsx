@@ -1,4 +1,11 @@
 import AboutAboutImg from '../../img/AboutAboutImg.png'
+import virusIcon1 from '../../img/virus-about-img-1.svg'
+import virusIcon2 from '../../img/virus-about-img-2.svg'
+import virusIcon3 from '../../img/virus-about-img-3.svg'
+import virusIcon4 from '../../img/virus-about-img-4.svg'
+import virusIcon5 from '../../img/virus-about-img-5.svg'
+import { motion } from 'framer-motion'
+
 
 const AboutAbout = () => {
     return (
@@ -14,7 +21,75 @@ const AboutAbout = () => {
                     </div>
                     <div className="AboutAbout__box">
                         <div className="AboutAbout__item text-center">
-                            <img src={AboutAboutImg} alt=""/>
+                            <motion.img src={AboutAboutImg} alt=""/>
+                            <motion.img 
+                                initial={{ opacity: 0 , x: 100, rotate: -45}}
+                                animate={{ opacity: 1, x: 0, rotate: 0, transition: { duration: 1}}}
+                                drag 
+                                dragConstraints={{
+                                    top: 0,
+                                    left: -50,
+                                    right: 0,
+                                    bottom: 50,
+                                }}
+                                whileTap={{ scale: 0.9 }} 
+                                whileHover={{ scale: 1.5, rotate: 45 }} 
+                                className="AboutAbout__virusIcon-1" src={virusIcon1} alt=""/>
+                            <motion.img 
+                                initial={{ opacity: 0 , x: -200, rotate: -45}}
+                                animate={{ opacity: 1, x: 0, rotate: 0, transition: { duration: 1}}}
+                                drag 
+                                dragConstraints={{
+                                    top: 0,
+                                    left: -100,
+                                    right: 0,
+                                    bottom: 0,
+                                }}
+                                whileTap={{ scale: 0.9 }} 
+                                whileHover={{ scale: 1.5, rotate: 45 }} 
+                                className="AboutAbout__virusIcon-2" src={virusIcon2} alt=""/>
+
+                            <motion.img
+                                initial={{ opacity: 0 , x: 100, rotate: -45}}
+                                animate={{ opacity: 1, x: 0, rotate: 0, transition: { duration: 1}}}
+                                drag 
+                                dragConstraints={{
+                                    top: 0,
+                                    left: 0,
+                                    right: 0,
+                                    bottom: 0,
+                                }}
+                                whileTap={{ scale: 0.7 }} 
+                                whileHover={{ scale: 1.5, rotate: -45 }} 
+                                className="AboutAbout__virusIcon-3" src={virusIcon3} alt=""/>
+
+                            <motion.img
+                                initial={{ opacity: 0 , x: 200, rotate: -45}}
+                                animate={{ opacity: 1, x: 0, rotate: 0, transition: { duration: 1}}}
+                                drag 
+                                dragConstraints={{
+                                    top: 0,
+                                    left: 0,
+                                    right: 0,
+                                    bottom: 0,
+                                }}
+                                whileTap={{ scale: 0.9 }} 
+                                whileHover={{ scale: 1.5, rotate: 90 }} 
+                                className="AboutAbout__virusIcon-4" src={virusIcon4} alt=""/>
+
+                            <motion.img
+                                initial={{ opacity: 0 , y: -100, rotate: -45}}
+                                animate={{ opacity: 1, y: 0, rotate: 0, transition: { duration: 1}}}
+                                drag 
+                                dragConstraints={{
+                                    top: 0,
+                                    left: 0,
+                                    right: 100,
+                                    bottom: 0,
+                                }}
+                                whileTap={{ scale: 0.9 }} 
+                                whileHover={{ scale: 1.5, rotate: 45 }} 
+                                className="AboutAbout__virusIcon-5" src={virusIcon5} alt=""/>
                         </div>
                     </div>
                 </div>

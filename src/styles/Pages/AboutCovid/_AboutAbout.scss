@@ -1,5 +1,6 @@
 .AboutAbout {
     padding: 100px 0;
+    overflow: hidden;
 
     @media (max-width: $small) {
         padding: 50px 0;
@@ -18,6 +19,7 @@
         width: 50%;
         padding-left: 15px;
         padding-right: 15px;
+        position: relative;
 
         @media (max-width: $large) {
             width: 100%;
@@ -64,5 +66,70 @@
                 margin-bottom: 10px;
             }
         }
+    }
+
+    &__virusIcon-1 {
+        position: absolute;
+        top: -85px;
+        right: -31px;
+        
+        @media (max-width: $medium) {
+            top: -47px;
+            right: 61px;
+        }
+        @media (max-width: $small) {
+            top: -47px;
+            right: -31px;
+            transform: scale(1.1);
+        }
+    }
+    &__virusIcon-2 {
+        position: absolute;
+        top: -47px;
+        right: 225px;
+
+        @media (max-width: $medium) {
+            top: -39px;
+            right: 45%;
+        }
+        
+    }
+    &__virusIcon-3 {
+        position: absolute;
+        top: 150px;
+        right: 15px;
+
+        @media (max-width: $medium) {
+            top: 118px;
+            right: 49px;
+        }
+        @media (max-width: $small) {
+            right: -24px;
+        }
+    }
+    &__virusIcon-4 {
+        position: absolute;
+        bottom: -52px;
+        right: 93px;
+
+        @media (max-width: $medium) {
+            bottom: -29px;
+            right: 110px;
+        }
+    }
+    &__virusIcon-5 {
+        position: absolute;
+        left: 38px;
+        bottom: -42px;
+
+        @media (max-width: $medium) {
+            left: 75px;
+            bottom: -47px;
+            transform: scale(1.5);
+        }
+        @media (max-width: $small) {
+            left: -34px;
+        }
+       
     }
 }

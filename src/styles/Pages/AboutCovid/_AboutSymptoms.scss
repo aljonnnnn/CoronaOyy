@@ -1,5 +1,6 @@
 .AboutSymptoms {
     padding: 100px 0;
+    overflow-x: hidden;
 
     @media (max-width: $large) {
         padding: 50px 0;
@@ -30,6 +31,7 @@
         max-width: 589px;
         padding: 0 15px;
         margin: 0 auto;
+        position: relative;
     }
 
     &__flex {
@@ -71,5 +73,26 @@
     &__title {
         display: block;
         text-align: center;
+    }
+
+    &__virusICon-1 {
+        position: absolute;
+        top: -80px;
+        left: -68%;
+    }
+    &__virusICon-2 {
+        position: absolute;
+        left: -250px;
+        bottom: 58px;
+    }
+    &__virusICon-3 {
+        position: absolute;
+        top: 115px;
+        right: -195px;
+    }
+    &__virusICon-4 {
+        position: absolute;
+        right: -506px;
+        bottom: 0;
     }
 }

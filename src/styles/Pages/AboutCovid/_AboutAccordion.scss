@@ -70,4 +70,9 @@
         font-weight: 400;
         color: $body-color;
     }
+
+    &__icon {
+        max-width: 18px;
+        min-width: 18px;
+    }
 }

@@ -1,5 +1,6 @@
 .AboutYoutube {
     padding: 100px 0;
+    overflow: hidden;
 
     @media (max-width: $small) {
         padding: 50px 0;
@@ -9,6 +10,7 @@
         max-width: 813px;
         margin: 0 auto;
         padding: 0 15px;
+        position: relative;
     }
 
     &__heading-title {
@@ -40,5 +42,26 @@
             width: 100%;
             height: 220px;
         }
+    }
+
+    &__virusICon-1 {
+        position: absolute;
+        top: 71px;
+        left: -230px;
+    }
+    &__virusICon-2 {
+        position: absolute;
+        left: -120px;
+        bottom: -124px;
+    }
+    &__virusICon-3 {
+        position: absolute;
+        top: 151px;
+        right: -90px;
+    }
+    &__virusICon-4 {
+        position: absolute;
+        right: -459px;
+        bottom: -119px;
     }
 }
