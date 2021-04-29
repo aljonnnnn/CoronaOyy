@@ -1,9 +1,9 @@
 .AboutAbout {
-    padding: 100px 0;
+    padding: 6.25rem 0;
     overflow: hidden;
 
     @media (max-width: $small) {
-        padding: 50px 0;
+        padding: 3.125rem 0;
     }
 
     &__flex {
@@ -11,21 +11,21 @@
         align-items: flex-start;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin-left: -15px;
-        margin-right: -15px;
+        margin-left: -0.9375rem;
+        margin-right: -0.9375rem;
     }
 
     &__box {
         width: 50%;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
         position: relative;
 
         @media (max-width: $large) {
             width: 100%;
 
             &:first-child {
-                margin-bottom: 30px;
+                margin-bottom: 1.875rem;
             }
         }
     }
@@ -34,101 +34,101 @@
 
     &__heading-title {
         position: relative;
-        font-size: 32px;
+        font-size: 2rem;
         font-weight: 400;
         color: #0F0F0F;
-        margin-bottom: 29px;
+        margin-bottom: 1.8125rem;
 
         @media (max-wdith: $large) {
-            margin-bottom: 25px;
+            margin-bottom: 1.5625rem;
         }
 
         &::after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: -0.3125rem;
             left: 0;
-            width: 65px;
-            height: 5px;
+            width: 4.0625rem;
+            height: 0.3125rem;
             background-color: $primary-color;
-            border-radius: 5px;
+            border-radius: 0.3125rem;
         }
     }
     
     &__paragraph {
-        font-size: 16px;
+        font-size: 1rem;
         color: $body-color;
 
         &:nth-child(2) {
-            margin-bottom: 25px;
+            margin-bottom: 1.5625rem;
 
             @media (max-width: $large) {
-                margin-bottom: 10px;
+                margin-bottom: 0.625rem;
             }
         }
     }
 
     &__virusIcon-1 {
         position: absolute;
-        top: -85px;
-        right: -31px;
+        top: -5.3125rem;
+        right: -1.9375rem;
         
         @media (max-width: $medium) {
-            top: -47px;
-            right: 61px;
+            top: -2.9375;
+            right: 3.8125rem;
         }
         @media (max-width: $small) {
-            top: -47px;
-            right: -31px;
+            top: -2.9375rem;
+            right: -1.9375rem;
             transform: scale(1.1);
         }
     }
     &__virusIcon-2 {
         position: absolute;
-        top: -47px;
-        right: 225px;
+        top: -2.9375rem;
+        right: 14.0625rem;
 
         @media (max-width: $medium) {
-            top: -39px;
+            top: -2.4375rem;
             right: 45%;
         }
         
     }
     &__virusIcon-3 {
         position: absolute;
-        top: 150px;
-        right: 15px;
+        top: 9.375rem;
+        right: 0.9375rem;
 
         @media (max-width: $medium) {
-            top: 118px;
-            right: 49px;
+            top: 7.375rem;
+            right: 3.0625rem;
         }
         @media (max-width: $small) {
-            right: -24px;
+            right: -1.5rem;
         }
     }
     &__virusIcon-4 {
         position: absolute;
-        bottom: -52px;
-        right: 93px;
+        bottom: -3.25rem;
+        right: 5.8125rem;
 
         @media (max-width: $medium) {
-            bottom: -29px;
-            right: 110px;
+            bottom: -1.8125rem;
+            right: 6.875rem;
         }
     }
     &__virusIcon-5 {
         position: absolute;
-        left: 38px;
-        bottom: -42px;
+        left: 2.375rem;
+        bottom: -2.625rem;
 
         @media (max-width: $medium) {
-            left: 75px;
-            bottom: -47px;
+            left: 4.6875rem;
+            bottom: -2.9375rem;
             transform: scale(1.5);
         }
         @media (max-width: $small) {
-            left: -34px;
+            left: -2.125rem;
         }
        
     }

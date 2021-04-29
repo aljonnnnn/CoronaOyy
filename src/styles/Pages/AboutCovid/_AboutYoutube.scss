@@ -1,67 +1,67 @@
 .AboutYoutube {
-    padding: 100px 0;
+    padding: 6.25rem 0;
     overflow: hidden;
 
     @media (max-width: $small) {
-        padding: 50px 0;
+        padding: 3.125rem 0;
     }
     
     &__container {
-        max-width: 813px;
+        max-width: 50.8125rem;
         margin: 0 auto;
-        padding: 0 15px;
+        padding: 0 0.9375rem;
         position: relative;
     }
 
     &__heading-title {
-        font-size: 32px;
+        font-size: 2rem;
         font-weight: 400;
         color: #0f0f0f;
         text-align: center;
         position: relative;
-        margin-bottom: 79px;
+        margin-bottom: 4.9375rem;
 
         &::after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: -0.3125rem;
             left: 50%;
             transform: translateX(-50%);
-            width: 65px;
-            height: 4px;
-            border-radius: 5px;
+            width: 4.0625rem;
+            height: 0.25rem;
+            border-radius: 0.3125rem;
             background-color: $primary-color;
         }
     }
 
     &__video {
         width: 100%;
-        height: 458px;
+        height: 28.625rem;
 
         @media (max-width: $small) {
             width: 100%;
-            height: 220px;
+            height: 13.75rem;
         }
     }
 
     &__virusICon-1 {
         position: absolute;
-        top: 71px;
-        left: -230px;
+        top: 4.4375rem;
+        left: -14.375rem;
     }
     &__virusICon-2 {
         position: absolute;
-        left: -120px;
-        bottom: -124px;
+        left: -7.5rem;
+        bottom: -7.75rem;
     }
     &__virusICon-3 {
         position: absolute;
-        top: 151px;
-        right: -90px;
+        top: 9.4375rem;
+        right: -5.625rem;
     }
     &__virusICon-4 {
         position: absolute;
-        right: -459px;
-        bottom: -119px;
+        right: -28.6875rem;
+        bottom: -7.4375rem;
     }
 }

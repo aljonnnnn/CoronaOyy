@@ -1,9 +1,9 @@
 .AboutHero {
-    /* min-height: 749px; */
+    /* min-height: 46.8125rem; */
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 80px 0;
+    padding: 5rem 0;
     overflow: hidden;
     
     &__flex {
@@ -11,127 +11,129 @@
         align-items: flex-start;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin-right: -15px;
-        margin-left: -15px;
+        margin-right: -0.9375rem;
+        margin-left: -0.9375rem;
     }
 
     &__box {
         width: 50%;
-        min-height: 298px;
-        padding-left: 15px;
-        padding-right: 15px;
+        min-height: 18.625rem;
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
         position: relative;
 
         @media (max-width: $small) {
             width: 100%;
 
             &:first-child {
-                margin-bottom: 20px;
+                margin-bottom: 1.25rem;
                 order: 2;
             }
 
             &:last-child {
-                margin-bottom: 40px;
+                margin-bottom: 2.5rem;
             }
         }
     }
 
-    &__item {}
+    &__item {
+        position: relative;
+    }
 
     &__sub-title {
-        font-size: 20px;
+        font-size: 1.25rem;
         color: $primary-color;
-        margin-bottom: 5px;
+        margin-bottom: 0.3125rem;
 
         @media (max-width: $large) {
-            font-size: 18px;
+            font-size: 1.125rem;
         }
 
 
     }
 
     &__title {
-        font-size: 48px;
+        font-size: 3rem;
         font-weight: 600;
         color: $heading-color;
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
 
         @media (max-width: $large) {
-            font-size: 40px;
+            font-size: 2.5rem;
             line-height: 1.1;
         }
     }
 
     &__paragraph {
-        font-size: 18px;
+        font-size: 1.125rem;
         color: $body-color;
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
 
         @media (max-width: $large) {
-            font-size: 16px;
+            font-size: 1rem;
         }
     }
 
     &__btn {
         display: inline-block;
-        font-size: 18px;
+        font-size: 1.25rem;
         color: $white;
         background-color: $primary-color;
-        padding: 10px 32px;
-        border-radius: 5px;
+        padding: 0.625rem 2rem;
+        border-radius: 0.3125rem;
     }
     
     &__img {
 
         @media (max-width: $small) {
-            max-width: 250px;
+            max-width: 15.625rem;
         }
     }
 
     &__virusICon-1 {
         position: absolute;
         top: 0;
-        left: 100px;
+        left: 6.25rem;
 
         @media (max-width: $small) {
-            left: 35px;
+            left: 2.1875rem;
         }
     }
 
     &__virusICon-2 {
         position: absolute;
-        top: 90px;
-        left: 132px;
+        top: 5.625rem;
+        left: 8.25rem;
 
         @media (max-width: $small) {
-            left: 96px;
+            left: 6rem;
         }
     }
 
     &__virusICon-3 {
         position: absolute;
-        top: 62px;
-        left: 368px;
+        top: 3.875rem;
+        left: 23rem;
 
         @media (max-width: $small) {
-            top: -23px;
-            left: 320px;
+            top: -1.4375rem;
+            left: 20rem;
         }
     }
     &__virusICon-4 {
         position: absolute;
-        bottom: -26px;
-        left: 105px;
+        bottom: -1.625rem;
+        left: 1.5625rem;
 
         @media (max-width: $small) {
-            bottom: -7px;
-            left: 50px;
+            bottom: -0.4375rem;
+            left: 3.125rem;
             transform: scale(1.8);
         }
     }
     &__virusICon-5 {
         position: absolute;
-        bottom: -93px;
+        bottom: -5.8125rem;
         left: 40%;
 
 

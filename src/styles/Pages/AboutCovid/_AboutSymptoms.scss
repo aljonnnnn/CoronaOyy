@@ -1,35 +1,35 @@
 .AboutSymptoms {
-    padding: 100px 0;
+    padding: 6.25rem 0;
     overflow: hidden;
 
     @media (max-width: $large) {
-        padding: 50px 0;
+        padding: 3.125rem 0;
     }
 
     &__heading-title {
-        font-size: 32px;
+        font-size: 2rem;
         font-weight: 400;
         color: $heading-color;
         text-align: center;
         position: relative;
-        margin-bottom: 79px;
+        margin-bottom: 4.9375rem;
 
         &:after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: -0.3125rem;
             left: 50%;
             transform: translateX(-50%);
-            width: 65px;
-            height: 4px;
-            border-radius: 5px;
+            width: 4.0625rem;
+            height: 0.25rem;
+            border-radius: 0.3125rem;
             background-color: $primary-color;
         }
     }
 
     &__container {
-        max-width: 589px;
-        padding: 0 15px;
+        max-width: 36.8125rem;
+        padding: 0 0.9375rem;
         margin: 0 auto;
         position: relative;
     }
@@ -39,27 +39,27 @@
         align-items: flex-start;
         justify-content: center;
         flex-wrap: wrap;
-        margin-left: -15px;
-        margin-right: -15px;
+        margin-left: -0.9375rem;
+        margin-right: -0.9375rem;
     }
 
     &__box {
-        padding: 0 35px;
+        padding: 0 2.1875rem;
 
         @media (max-width: $large) {
-            padding: 0 30px;
+            padding: 0 1.875rem;
 
             &:not(:last-child) {
-                margin-bottom: 40px;
+                margin-bottom: 2.5rem;
             }
         }
         
-        @media (max-width: 365px ) {
-            padding: 0 20px;
+        @media (max-width: $very-small ) {
+            padding: 0 1.25rem;
         }
 
         &:not(:last-child) {
-            margin-bottom: 70px;
+            margin-bottom: 4.375rem;
         }
     }
 
@@ -67,7 +67,7 @@
 
     &__img {
         display: block;
-        margin-bottom: 8px;
+        margin-bottom: 0.5rem;
     }
 
     &__title {
@@ -77,22 +77,22 @@
 
     &__virusICon-1 {
         position: absolute;
-        top: -80px;
+        top: -5rem;
         left: -68%;
     }
     &__virusICon-2 {
         position: absolute;
-        left: -250px;
-        bottom: 58px;
+        left: -15.625rem;
+        bottom: 3.625rem;
     }
     &__virusICon-3 {
         position: absolute;
-        top: 115px;
-        right: -195px;
+        top: 7.1875rem;
+        right: -12.1875rem;
     }
     &__virusICon-4 {
         position: absolute;
-        right: -506px;
+        right: -31.625rem;
         bottom: 0;
     }
 }

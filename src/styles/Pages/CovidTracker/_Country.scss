@@ -1,17 +1,17 @@
 .country {
-    padding: 130px 0 50px;
+    padding: 8.125rem 0 3.125rem;
     display: flex;
     align-items: center;
     justify-content: center;
 
     &__name {
-        font-size: 32px;
-        margin: 0 15px;
+        font-size: 2rem;
+        margin: 0 0.9375rem;
     }
 
     &__flag {
-        max-height: 40px;
-        max-width: 80px;
-        margin: 0 15px;
+        max-height: 2.5rem;
+        max-width: 5rem;
+        margin: 0 0.9375rem;
     }
 }

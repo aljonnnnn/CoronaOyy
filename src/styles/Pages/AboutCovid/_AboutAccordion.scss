@@ -1,32 +1,32 @@
 .AboutAccordion {
-    padding: 100px 0;
+    padding: 6.25rem 0;
     overflow: hidden;
 
     @media (max-width: $small) {
-        padding: 50px 0;
+        padding: 3.125rem 0;
     }
 
     &__container {
-        max-width: 586px;
-        padding: 0 15px;
+        max-width: 36.625rem;
+        padding: 0 0.9375rem;
         margin: 0 auto;
     }
 
     &__heading-title {
-        font-size: 32px;
+        font-size: 2rem;
         font-weight: 400;
         color: $heading-color;
         text-align: center;
         position: relative;
-        margin-bottom: 79px;
+        margin-bottom: 4.9375rem;
     }
 
     &__accordion {
         background-color: $background-color-2;
-        border-radius: 5px;
+        border-radius: 0.3125rem;
         
         &:not(:last-child) {
-            margin-bottom: 15px;
+            margin-bottom: 0.9375rem;
         }
     }
 
@@ -34,9 +34,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 12px 15px;
+        padding: 0.75rem 0.9375rem;
         background-color: $background-color-1;
-        border-radius: 5px;
+        border-radius: 0.3125rem;
         cursor: pointer;
 
         &.active {
@@ -45,21 +45,21 @@
     }
 
     &__accordion-question {
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 400;
         color: #111;
-        padding-right: 15px;
+        padding-right: 0.9375rem;
 
         &.active {
             color: $white;
         }
     }
     &__accordion-body {
-        padding: 15px;
+        padding: 0.9375rem;
         overflow: hidden;
         display: none;
-        border-end-end-radius: 5px;
-        border-end-start-radius: 5px;
+        border-end-end-radius: 0.3125rem;
+        border-end-start-radius: 0.3125rem;
         background-color: $background-color-2;
 
         &.active {
@@ -67,13 +67,13 @@
         }
     }
     &__accordion-answer {
-        font-size: 14px;
+        font-size: 0.875rem;
         font-weight: 400;
         color: $body-color;
     }
 
     &__icon {
-        max-width: 18px;
-        min-width: 18px;
+        max-width: 1.125rem;
+        min-width: 1.125rem;
     }
 }

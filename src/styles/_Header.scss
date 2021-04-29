@@ -3,19 +3,20 @@
     position: fixed;
     width: 100%;
     z-index: 1100;
+    box-shadow: 0 0.125rem 0.4375rem rgba(0, 0, 0, 0.15);
 
     &__nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
     }
     
     &__logo {
 
         @media (max-width: $small) {
-            max-width: 133.766px;
+            max-width: 8.360375rem;
         }
     }
     &__menu {}
@@ -25,17 +26,17 @@
 
         // margin-right: 30px;
         &:not(:last-child) {
-            margin-right: 30px;
+            margin-right: 1.875rem;
 
             @media (max-width: $small) {
-                margin-right: 20px;
+                margin-right: 1.25rem;
             }
         }
     }
     
     &__link {
         display: inline-block;
-        font-size: 18px;
+        font-size: 1.125rem;
         color: $gray-color-2;
 
         &.active {
@@ -43,7 +44,7 @@
         }
 
         @media (max-width: $very-small) {
-            font-size: 16px;
+            font-size: 1rem;
         }
     }
 }

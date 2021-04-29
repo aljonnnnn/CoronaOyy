@@ -45,9 +45,9 @@ img {
     justify-content: center;
 
     .loading {
-        width: 60px;
-        height: 60px;
-        border-top: 5px solid $primary-color;
+        width: 3.75rem;
+        height: 3.75rem;
+        border-top: 0.3125rem solid $primary-color;
         border-radius: 50%;
         margin: 0 auto;
         animation: loading infinite 1s ease-in-out;
@@ -65,13 +65,13 @@ img {
 }
 
 .container {
-    max-width: 1260px;
+    max-width: 78.75rem;
     padding: 0 15px;
     margin: 0 auto;
     position: relative;
 
     @media (max-width: $large) {
-        max-width: 740px;
+        max-width: 46.25rem;
     }
 }
 
