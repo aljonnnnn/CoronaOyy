@@ -1,18 +1,12 @@
 .AboutAbout {
-    padding: 6.25rem 0;
-    overflow: hidden;
+    @include section-style;
 
     @media (max-width: $small) {
         padding: 3.125rem 0;
     }
 
     &__flex {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin-left: -0.9375rem;
-        margin-right: -0.9375rem;
+        @include section-flex;
     }
 
     &__box {

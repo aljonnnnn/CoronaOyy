@@ -1,6 +1,5 @@
 .AboutYoutube {
-    padding: 6.25rem 0;
-    overflow: hidden;
+    @include section-style;
 
     @media (max-width: $small) {
         padding: 3.125rem 0;

@@ -7,12 +7,7 @@
     overflow: hidden;
     
     &__flex {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin-right: -0.9375rem;
-        margin-left: -0.9375rem;
+        @include section-flex;
     }
 
     &__box {

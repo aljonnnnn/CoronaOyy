@@ -1,30 +1,12 @@
 .AboutSymptoms {
-    padding: 6.25rem 0;
-    overflow: hidden;
+    @include section-style;
 
     @media (max-width: $large) {
         padding: 3.125rem 0;
     }
 
     &__heading-title {
-        font-size: 2rem;
-        font-weight: 400;
-        color: $heading-color;
-        text-align: center;
-        position: relative;
-        margin-bottom: 4.9375rem;
-
-        &:after {
-            content: '';
-            position: absolute;
-            bottom: -0.3125rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4.0625rem;
-            height: 0.25rem;
-            border-radius: 0.3125rem;
-            background-color: $primary-color;
-        }
+        @include section-title; 
     }
 
     &__container {
@@ -35,12 +17,7 @@
     }
 
     &__flex {
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-left: -0.9375rem;
-        margin-right: -0.9375rem;
+        @include section-flex;
     }
 
     &__box {
