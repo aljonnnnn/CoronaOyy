@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import Cards from "../Cards"
-import Chart from "../Chart"
-import Country from "../Country"
-import CountryPicker from "../CountryPicker"
-import useFetch from "../../API/useFetch"
+import Cards from "../containers/stateful-components/Home/Card/Cards"
+import Chart from "../containers/stateful-components/Home/Chart/Chart"
+import Country from "../containers/stateful-components/Home/Country/Country"
+import CountryPicker from "../containers/stateful-components/Home/Country-picker/CountryPicker"
+import useFetch from "../utils/useFetch"
 
 const CovidTracker = () => {
     const [country, setCountry] = useState();
