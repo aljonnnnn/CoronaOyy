@@ -1,0 +1,25 @@
+.lineChart {
+
+    &__flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-right: -0.9375rem;
+        margin-left: -0.9375rem;
+    }
+    &__box {
+        width: 50%;
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: $small) {
+            width: 100%;
+        }
+    }
+    &__item {}
+}
