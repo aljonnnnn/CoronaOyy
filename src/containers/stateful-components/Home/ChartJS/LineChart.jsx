@@ -1,7 +1,8 @@
 import { Line } from "react-chartjs-2"
 import useFetch from "../../../../utils/useFetch"
 
-const LineChart = ({country}) => {
+const LineChart = ({countryPast90}) => {
+    console.log(countryPast90)
     // const casesLabel = country ? Object.keys(countryPast90.timeline.cases) : Object.keys(globalPast90.cases)
     // const casesValues = country ? Object.values(countryPast90.timeline.cases) : Object.values(globalPast90.cases)
     // const deathsLabel = country ? Object.keys(countryPast90.timeline.deaths) : Object.keys(globalPast90.deaths)
@@ -16,27 +17,27 @@ const LineChart = ({country}) => {
     let recoveredValues = []
 
     
-    const { data: globalPast90, pending: pendingGlobalPast90 } = useFetch('https://corona.lmao.ninja/v3/covid-19/historical/all?lastdays=90');
-    const { data: countryPast90, pending: pendingCountryPast90, error } = useFetch(`https://corona.lmao.ninja/v3/covid-19/historical/Canada?lastdays=90`);
-    console.log(globalPast90)
-    console.log(countryPast90)
+    // const { data: globalPast90, pending: pendingGlobalPast90 } = useFetch('https://corona.lmao.ninja/v3/covid-19/historical/all?lastdays=90');
+    // const { data: countryPast90, pending: pendingCountryPast90, error } = useFetch(`https://corona.lmao.ninja/v3/covid-19/historical/Canada?lastdays=90`);
+    // console.log(globalPast90)
+    // console.log(countryPast90)
 
 
-    if (globalPast90 && countryPast90) {
-        casesLabel = country ? Object.keys(countryPast90.timeline.cases) : Object.keys(globalPast90.cases)
-        casesValues = country ? Object.values(countryPast90.timeline.cases) : Object.values(globalPast90.cases)
-        deathsLabel = country ? Object.keys(countryPast90.timeline.deaths) : Object.keys(globalPast90.deaths)
-        deathsValues = country ? Object.values(countryPast90.timeline.deaths) : Object.values(globalPast90.deaths)
-        recoveredLabel = country ? Object.keys(countryPast90.timeline.recovered) : Object.keys(globalPast90.recovered)
-        recoveredValues = country ? Object.values(countryPast90.timeline.recovered) : Object.values(globalPast90.recovered)
-    }
+    // if (countryPast90) {
+    //     casesLabel = country ? Object.keys(countryPast90.timeline.cases) : Object.keys(countryPast90.cases)
+    //     casesValues = country ? Object.values(countryPast90.timeline.cases) : Object.values(countryPast90.cases)
+    //     deathsLabel = country ? Object.keys(countryPast90.timeline.deaths) : Object.keys(countryPast90.deaths)
+    //     deathsValues = country ? Object.values(countryPast90.timeline.deaths) : Object.values(countryPast90.deaths)
+    //     recoveredLabel = country ? Object.keys(countryPast90.timeline.recovered) : Object.keys(countryPast90.recovered)
+    //     recoveredValues = country ? Object.values(countryPast90.timeline.recovered) : Object.values(countryPast90.recovered)
+    // }
     return (
         <div className="lineChart">
             <div className="container">
                 <div className="lineChart__flex">
                     <div className="lineChart__box">
                         <div className="lineChart__item">
-                            <Line data={{
+                            {/* <Line data={{
                                 labels: casesLabel,
                                 datasets: [
                                     {
@@ -107,7 +108,7 @@ const LineChart = ({country}) => {
                                         },
                                     ],
                                 },
-                            }}/>
+                            }}/> */}
                         </div>
                     </div>
                 </div>

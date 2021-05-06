@@ -1,7 +1,7 @@
 import { Bar, Line } from 'react-chartjs-2'
 import useFetch from '../../../../utils/useFetch';
 
-const BarChart = ({ globalData, selectedCountry, countryName, globalPast90 }) => {
+const BarChart = ({ globalData, selectedCountry, countryName }) => {
     // let url
     // if (countryName) {
     //     url = `https://corona.lmao.ninja/v3/covid-19/historical/${countryName}?lastdays=90`

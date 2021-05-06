@@ -12,8 +12,15 @@ const CovidTracker = () => {
     const { data: global } = useFetch('https://disease.sh/v3/covid-19/all');
     const { data: allCountry } = useFetch('https://disease.sh/v3/covid-19/countries');
     const { data: selectedCountry, pending: pendingSelectedCountry } = useFetch('https://disease.sh/v3/covid-19/countries/', country);
-    const { data: globalPast90, pending: pendingGlobalPast90 } = useFetch('https://corona.lmao.ninja/v3/covid-19/historical/all?lastdays=90');
-    const { data: countryPast90, pending: pendingCountryPast90 } = useFetch('https://corona.lmao.ninja/v3/covid-19/historical/Canada?lastdays=90');
+
+    let url = 'https://corona.lmao.ninja/v3/covid-19/historical/all?lastdays=90'
+    
+    if (country) {
+        url = `https://corona.lmao.ninja/v3/covid-19/historical/${country}?lastdays=90`
+        console.log('country has selected')
+    }
+    const { data: countryPast90, pending: pendingCountryPast90, error } = useFetch(url);
+    // console.log(countryPast90)
 
     // {global && console.log(global)}
     // {allCountry && console.log(allCountry)}
@@ -31,9 +38,9 @@ const CovidTracker = () => {
             {allCountry && <CountryPicker onChanged={handleSelectCountry} countryData={allCountry}/>}
 
             {pendingSelectedCountry && <Loading />}
-            {global && selectedCountry && globalPast90 && <BarChart globalData={global} selectedCountry={selectedCountry} countryName={country} globalPast90={globalPast90}/> }
+            {global && selectedCountry && <BarChart globalData={global} selectedCountry={selectedCountry} countryName={country} /> }
             {pendingSelectedCountry && <Loading />}
-            {globalPast90 && <LineChart globalPast90={globalPast90} countryPast90={countryPast90} country={country} />}
+            {countryPast90 && <LineChart country={country} countryPast90={countryPast90} error={error} />}
         </main>
     )
 }
