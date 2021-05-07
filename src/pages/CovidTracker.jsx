@@ -6,6 +6,8 @@ import CountryPicker from "../containers/stateful-components/Home/Country-picker
 import useFetch from "../utils/useFetch"
 import Loading from '../containers/stateless-components/Loading/Loading'
 import LineChart from '../containers/stateful-components/Home/ChartJS/LineChart'
+import ApexChartBar from '../containers/stateful-components/Home/ApexChart/ApexChartBar'
+
 
 const CovidTracker = () => {
     const [country, setCountry] = useState();
@@ -38,7 +40,8 @@ const CovidTracker = () => {
             {allCountry && <CountryPicker onChanged={handleSelectCountry} countryData={allCountry}/>}
 
             {pendingSelectedCountry && <Loading />}
-            {global && selectedCountry && <BarChart globalData={global} selectedCountry={selectedCountry} countryName={country} /> }
+            {global && selectedCountry && <ApexChartBar globalData={global} selectedCountry={selectedCountry} countryName={country} />}
+            {/* {global && selectedCountry && <BarChart globalData={global} selectedCountry={selectedCountry} countryName={country} /> } */}
             {pendingSelectedCountry && <Loading />}
             {countryPast90 && <LineChart country={country} countryPast90={countryPast90} error={error} />}
         </main>
