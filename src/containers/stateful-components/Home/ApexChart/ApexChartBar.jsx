@@ -17,13 +17,15 @@ const ApexChartBar = ({ globalData, selectedCountry, countryName }) => {
                     'Deaths',
                     'Cases',
                 ],
-                fill: {
-                    colors: ["#F44336"]
-                },
-                    dataLabels: {
-                        enabled: false
-                },
-            }
+                
+            },
+            colors: ['#EE6161', '#20AC76', '#283942', '#EE6161'],
+            // fill: {
+            //     colors: ['#9C27B0', '#E91E63', '#9C27B0']
+            // },
+            dataLabels: {
+                enabled: false
+            },
         },
         series: [{
             name: "People",
@@ -38,7 +40,7 @@ const ApexChartBar = ({ globalData, selectedCountry, countryName }) => {
                     options={state.options}
                     series={state.series}
                     type='bar'
-                    height='500'
+                    height='400'
                     width='100%'
                 />
             </div>
