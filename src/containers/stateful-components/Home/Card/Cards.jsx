@@ -1,17 +1,18 @@
+import { useContext } from 'react'
 import CountUp from 'react-countup'
-const Cards = ({globalData, selectedCountry, countryName}) => {
-
-    // console.log(globalData)
-    // console.log(selectedCountry)
-    // console.log(countryName)
-    const data = countryName ? selectedCountry : globalData
-    // console.log(data)
+import { CoronaContext } from '../../../../App'
+const Cards = () => {
+    const { state, dispatch } = useContext(CoronaContext)
+    const { currentCountryName, global, country } = state
+    
+    const data = currentCountryName ? country : global
 
     const date = new Date().toLocaleDateString()
 
     return(
         <div className='card'>
-            <div className="container">
+           {data && 
+             <div className="container">
                 <div className="card__flex">
                     <div className="card__box">
                         <div className="card__item yellow">
@@ -47,6 +48,7 @@ const Cards = ({globalData, selectedCountry, countryName}) => {
                     </div>
                 </div>
             </div>
+           }
         </div>
     )
 }

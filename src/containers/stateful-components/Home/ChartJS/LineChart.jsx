@@ -2,7 +2,7 @@ import { Line } from "react-chartjs-2"
 import useFetch from "../../../../utils/useFetch"
 
 const LineChart = ({countryPast90}) => {
-    console.log(countryPast90)
+    // console.log(countryPast90)
     // const casesLabel = country ? Object.keys(countryPast90.timeline.cases) : Object.keys(globalPast90.cases)
     // const casesValues = country ? Object.values(countryPast90.timeline.cases) : Object.values(globalPast90.cases)
     // const deathsLabel = country ? Object.keys(countryPast90.timeline.deaths) : Object.keys(globalPast90.deaths)

@@ -1,20 +1,16 @@
+import { useContext } from 'react';
+import { CoronaContext } from '../../../../App';
 import globalICon from '../../../../assets/img/global.svg'
 
-const Country = ({globalData, selectedCountry: {country, countryInfo }, countryName}) => {
-    // console.log(globalData)
-    // console.log(selectedCountry)
-    // console.log(countryName)
-    // console.log(selectedCountry.countryInfo.flag)
-    // {countryInfo && const data = countryName ? country : globalData}
-    // const flag = countryName ? selectedCountry.countryInfo.flag : globalICon
-    // console.log(flag)
-    // console.log(countryName)
-    // console.log(countryInfo)
+const Country = () => {
+    const {state, dispatch} = useContext(CoronaContext)
+    const { currentCountryName, country } = state
 
     return (
         <div className="country">
-            <span className='country__name'>{countryName ? country : 'Global'}</span>
-            <img className='country__flag' src={countryInfo ? countryInfo.flag : globalICon} alt=""/>
+            <span className='country__name'>{currentCountryName ? currentCountryName : 'Global'}</span>
+            {/* <img className='country__flag' src={country ? country.flag : globalICon} alt=""/> */}
+            <img className='country__flag' src={country ? country.flag : globalICon} alt=""/>
         </div>
     )
 }

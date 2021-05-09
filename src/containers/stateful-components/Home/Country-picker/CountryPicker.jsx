@@ -1,11 +1,19 @@
+import { useContext } from 'react'
+import { CoronaContext } from '../../../../App'
 
-const CountryPicker = ({onChanged, countryData}) => {
-    // console.log(countryData)
+const CountryPicker = () => {
+    const {state, dispatch} = useContext(CoronaContext)
+    const {countriesName} = state
+
+    const handleCountrySelector = (e) => {
+        dispatch({ type: 'CHANGE_COUNTRY_NAME', payload: e.target.value})
+    }
+
     return(
         <form action="" className='country-picker text-center'>
-            <select name="" id="" className='country-picker__select' onChange={onChanged}>
+            <select name="" id="" className='country-picker__select' onChange={handleCountrySelector}>
                 <option value="" className='country-picker__option'>Global</option>
-                {countryData.map(({country : countryName }) => <option key={countryName} value={countryName} className='country-picker__option'>{countryName}</option>)}
+                {countriesName.map(name => <option key={name} value={name} className='country-picker__option'>{name}</option>)}
             </select>
         </form>
     )

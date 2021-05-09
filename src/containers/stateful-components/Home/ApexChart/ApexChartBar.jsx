@@ -1,10 +1,15 @@
-import { m } from 'framer-motion'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import ReactApexChart from 'react-apexcharts'
+import { CoronaContext } from '../../../../App'
 
 const ApexChartBar = ({ globalData, selectedCountry, countryName }) => {
-    const data = countryName ? selectedCountry : globalData
-    const [state, setState] = useState({
+    
+    const {state, dispatch} = useContext(CoronaContext)
+    const { currentCountryName, country, global } = state
+
+    const data = currentCountryName ? country : global
+
+    const displayData = {
         options: {
             chart: {
                 background: "#f4f4f4",
@@ -29,21 +34,25 @@ const ApexChartBar = ({ globalData, selectedCountry, countryName }) => {
         },
         series: [{
             name: "People",
-            data: [data.active, data.recovered, data.deaths, data.cases]
+            data: data ? [data.active, data.recovered, data.deaths, data.cases] : []
         }]
-    })
+    }
+
     
     return (
         <section className='BarChart text-center'>
-            <div className="container">
-                <ReactApexChart 
-                    options={state.options}
-                    series={state.series}
-                    type='bar'
-                    height='400'
-                    width='100%'
-                />
-            </div>
+            {
+                country || global ? 
+                <div className="container">
+                    <ReactApexChart 
+                        options={displayData.options}
+                        series={displayData.series}
+                        type='bar'
+                        height='400'
+                        width='100%'
+                    />
+                </div> : null
+            }
         </section>
     )
 }
