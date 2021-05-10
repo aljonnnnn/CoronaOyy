@@ -1,14 +1,14 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { CoronaContext } from '../../../../App'
 
-const CountryPicker = () => {
+const CountryPicker = ({loading}) => {
     const {state, dispatch} = useContext(CoronaContext)
     const {countriesName, currentCountryName} = state
-    // console.log(countriesName)
+    console.log(loading)
+    console.log(currentCountryName)
 
     const handleCountrySelector = (e) => {
-        const countrySelected = e.target.value 
-        console.log(countrySelected)
+        const countrySelected = e.target.value
         dispatch({ type: 'CHANGE_COUNTRY_NAME', payload: countrySelected})
     }
 

@@ -40,7 +40,7 @@ const CovidTracker = () => {
         <main className='main'>
             
             {loading ? <Loading /> : <div><Country /><Cards /> </div>}
-            <CountryPicker />
+            {/* <CountryPicker loading={loading} /> */}
             {loading ? <Loading /> : 
                 <>
                     <ApexChartBar />
