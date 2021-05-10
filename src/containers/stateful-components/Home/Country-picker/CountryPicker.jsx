@@ -3,10 +3,13 @@ import { CoronaContext } from '../../../../App'
 
 const CountryPicker = () => {
     const {state, dispatch} = useContext(CoronaContext)
-    const {countriesName} = state
+    const {countriesName, currentCountryName} = state
+    // console.log(countriesName)
 
     const handleCountrySelector = (e) => {
-        dispatch({ type: 'CHANGE_COUNTRY_NAME', payload: e.target.value})
+        const countrySelected = e.target.value 
+        console.log(countrySelected)
+        dispatch({ type: 'CHANGE_COUNTRY_NAME', payload: countrySelected})
     }
 
     return(

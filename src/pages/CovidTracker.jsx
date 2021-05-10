@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import Cards from "../containers/stateful-components/Home/Card/Cards"
 import BarChart from "../containers/stateful-components/Home/ChartJS/BarChart"
 import Country from "../containers/stateful-components/Home/Country/Country"
@@ -7,9 +7,15 @@ import useFetch from "../utils/useFetch"
 import Loading from '../containers/stateless-components/Loading/Loading'
 import LineChart from '../containers/stateful-components/Home/ChartJS/LineChart'
 import ApexChartBar from '../containers/stateful-components/Home/ApexChart/ApexChartBar'
+import { CoronaContext } from '../App'
 
 
 const CovidTracker = () => {
+    const { state, dispatch } = useContext(CoronaContext)
+    const { loading } = state
+
+
+
     const [country, setCountry] = useState();
     const { data: global } = useFetch('https://disease.sh/v3/covid-19/all');
     const { data: allCountry } = useFetch('https://disease.sh/v3/covid-19/countries');
@@ -29,21 +35,21 @@ const CovidTracker = () => {
     // {selectedCountry && console.log(selectedCountry)}
     // console.log(country)
 
-    const handleSelectCountry = (e) => {
-        setCountry(e.target.value)
-    }
 
     return(
         <main className='main'>
-            {global && selectedCountry && <Country globalData={global} selectedCountry={selectedCountry} countryName={country} />}
-            {global && selectedCountry && <Cards globalData={global} selectedCountry={selectedCountry} countryName={country} />}
-            {allCountry && <CountryPicker onChanged={handleSelectCountry} countryData={allCountry}/>}
-
-            {pendingSelectedCountry && <Loading />}
-            {global && selectedCountry && <ApexChartBar globalData={global} selectedCountry={selectedCountry} countryName={country} />}
-            {/* {global && selectedCountry && <BarChart globalData={global} selectedCountry={selectedCountry} countryName={country} /> } */}
-            {pendingSelectedCountry && <Loading />}
-            {countryPast90 && <LineChart country={country} countryPast90={countryPast90} error={error} />}
+            
+            {loading ? <Loading /> : <div><Country /><Cards /> </div>}
+            <CountryPicker />
+            {loading ? <Loading /> : 
+                <>
+                    <ApexChartBar />
+                    {/* {global && selectedCountry && <BarChart globalData={global} selectedCountry={selectedCountry} countryName={country} /> } */}
+                    {/* {pendingSelectedCountry && <Loading />} */}
+                    {/* <LineChart country={country} countryPast90={countryPast90} error={error} /> */}
+                </>
+            }
+         
         </main>
     )
 }

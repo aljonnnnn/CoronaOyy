@@ -14,24 +14,30 @@ export const coronaInfoReducer = (state, {type, payload}) => {
             return {
                 ...state,
                 countriesName: payload,
-                loading: false,
             }
         case 'GET_GLOBAL_DATA' :
             return {
                 ...state,
                 country: null,
-                global: payload
+                global: payload,
+                loading: false,
             }
         case 'GET_COUNTRY_DATA' :
             return {
                 ...state,
                 global: null,
-                country: payload
+                country: payload,
+                loading: false,
             }
         case 'CHANGE_COUNTRY_NAME' :
             return {
                 ...state,
                 currentCountryName: payload
+            }
+        case 'SET_LOADING' :
+            return {
+                ...state,
+                loading: true
             }
         default: 
             return state
