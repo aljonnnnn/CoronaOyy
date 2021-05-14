@@ -1,11 +1,10 @@
 import { useContext } from 'react';
 import { CoronaContext } from '../../../../App';
 import globalICon from '../../../../assets/img/global.svg'
-import Loading from '../../../stateless-components/Loading/Loading';
 
 const Country = () => {
-    const {state, dispatch} = useContext(CoronaContext)
-    const { currentCountryName, country, loading } = state
+    const {state} = useContext(CoronaContext)
+    const { currentCountryName, country } = state
 
     return (
         <div className="country">

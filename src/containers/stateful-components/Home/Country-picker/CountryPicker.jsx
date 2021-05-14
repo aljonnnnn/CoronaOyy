@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { CoronaContext } from '../../../../App'
 
 const CountryPicker = ({loading}) => {
