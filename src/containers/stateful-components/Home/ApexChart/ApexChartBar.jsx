@@ -1,10 +1,10 @@
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import ReactApexChart from 'react-apexcharts'
 import { CoronaContext } from '../../../../App'
 
-const ApexChartBar = ({ globalData, selectedCountry, countryName }) => {
+const ApexChartBar = () => {
     
-    const {state, dispatch} = useContext(CoronaContext)
+    const { state } = useContext(CoronaContext)
     const { currentCountryName, country, global } = state
 
     const data = currentCountryName ? country : global

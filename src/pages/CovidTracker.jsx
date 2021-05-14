@@ -11,7 +11,7 @@ import { CoronaContext } from '../App'
 
 
 const CovidTracker = () => {
-    const { state, dispatch } = useContext(CoronaContext)
+    const { state } = useContext(CoronaContext)
     const { loading } = state
 
 
@@ -43,7 +43,7 @@ const CovidTracker = () => {
             {/* <CountryPicker loading={loading} /> */}
             {loading ? <Loading /> : 
                 <>
-                    <ApexChartBar />
+                    <BarChart />
                     {/* {global && selectedCountry && <BarChart globalData={global} selectedCountry={selectedCountry} countryName={country} /> } */}
                     {/* {pendingSelectedCountry && <Loading />} */}
                     {/* <LineChart country={country} countryPast90={countryPast90} error={error} /> */}

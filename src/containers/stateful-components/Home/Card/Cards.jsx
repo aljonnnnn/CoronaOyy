@@ -1,11 +1,9 @@
 import { useContext } from 'react'
 import CountUp from 'react-countup'
 import { CoronaContext } from '../../../../App'
-import Loading from '../../../stateless-components/Loading/Loading'
 const Cards = () => {
-    const { state, dispatch } = useContext(CoronaContext)
-    const { currentCountryName, global, country, loading } = state
-    // console.log(loading)
+    const { state } = useContext(CoronaContext)
+    const { currentCountryName, global, country } = state
     
     const data = currentCountryName ? country : global
 
@@ -13,7 +11,6 @@ const Cards = () => {
 
     return(
         <div className='card'>
-            {/* {loading && <Loading />} */}
            {data && 
              <div className="container">
                 <div className="card__flex">
