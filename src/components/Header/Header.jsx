@@ -5,7 +5,7 @@ import { CoronaContext } from '../../App'
 
 const Header = () => {
     const { state, dispatch } = useContext(CoronaContext)
-    const { countriesName } = state
+    const { countriesName, currentCountryName } = state
 
     const handleCountrySelector = (e) => {
         const countrySelected = e.target.value
@@ -22,7 +22,7 @@ const Header = () => {
                     <li className='header__item'><NavLink to="/about" activeClassName="active" className='header__link'>About Covid</NavLink></li>
                 </ul>
                 <form className='header__form'>
-                    <select className='header__select' onChange={handleCountrySelector}>
+                    <select className='header__select' value={currentCountryName ? currentCountryName : 'Global'} onChange={handleCountrySelector}>
                         <option className='header__option' value='' >Global</option>
                         {countriesName.map(name => <option className='header__option' value={name} key={name} >{name}</option>)}
                     </select>

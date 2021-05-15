@@ -16,7 +16,6 @@ function App() {
 
   useEffect(() => {
     getCountryName(dispatch)
-    const country = ''
     if (state.currentCountryName) {
       getCountryData(dispatch, state.currentCountryName)
     } else {

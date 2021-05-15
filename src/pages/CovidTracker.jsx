@@ -16,9 +16,16 @@ const CovidTracker = () => {
     return(
         <main className='main'>
             
-            {loading ? <Loading /> : <div><Country /><Cards /> </div>}
-            {/* <CountryPicker loading={loading} /> */}
-            {loading ? <Loading /> : 
+            {loading ? <Loading /> 
+                : 
+                <div>
+                    <Country />
+                    <Cards /> 
+                    {/* <CountryPicker /> */}
+                </div>}
+
+            {loading ? <Loading /> 
+                : 
                 <>
                     <BarChart />
                     {/* <LineChart /> */}
