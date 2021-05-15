@@ -1,114 +1,116 @@
+import { useContext } from "react"
 import { Line } from "react-chartjs-2"
+import { CoronaContext } from "../../../../contexts/CoronaProvider"
 import useFetch from "../../../../utils/useFetch"
 
-const LineChart = ({countryPast90}) => {
-    // console.log(countryPast90)
-    // const casesLabel = country ? Object.keys(countryPast90.timeline.cases) : Object.keys(globalPast90.cases)
-    // const casesValues = country ? Object.values(countryPast90.timeline.cases) : Object.values(globalPast90.cases)
-    // const deathsLabel = country ? Object.keys(countryPast90.timeline.deaths) : Object.keys(globalPast90.deaths)
-    // const deathsValues = country ? Object.values(countryPast90.timeline.deaths) : Object.values(globalPast90.deaths)
-    // const recoveredLabel = country ? Object.keys(countryPast90.timeline.recovered) : Object.keys(globalPast90.recovered)
-    // const recoveredValues = country ? Object.values(countryPast90.timeline.recovered) : Object.values(globalPast90.recovered)
-    let casesLabel = []
-    let casesValues = [] 
-    let deathsLabel = []
-    let deathsValues = []
-    let recoveredLabel = []
-    let recoveredValues = []
+const LineChart = () => {
+    const { state } = useContext(CoronaContext)
+    const { history } = state
 
-    
-    // const { data: globalPast90, pending: pendingGlobalPast90 } = useFetch('https://corona.lmao.ninja/v3/covid-19/historical/all?lastdays=90');
-    // const { data: countryPast90, pending: pendingCountryPast90, error } = useFetch(`https://corona.lmao.ninja/v3/covid-19/historical/Canada?lastdays=90`);
-    // console.log(globalPast90)
-    // console.log(countryPast90)
-
-
-    // if (countryPast90) {
-    //     casesLabel = country ? Object.keys(countryPast90.timeline.cases) : Object.keys(countryPast90.cases)
-    //     casesValues = country ? Object.values(countryPast90.timeline.cases) : Object.values(countryPast90.cases)
-    //     deathsLabel = country ? Object.keys(countryPast90.timeline.deaths) : Object.keys(countryPast90.deaths)
-    //     deathsValues = country ? Object.values(countryPast90.timeline.deaths) : Object.values(countryPast90.deaths)
-    //     recoveredLabel = country ? Object.keys(countryPast90.timeline.recovered) : Object.keys(countryPast90.recovered)
-    //     recoveredValues = country ? Object.values(countryPast90.timeline.recovered) : Object.values(countryPast90.recovered)
-    // }
     return (
         <div className="lineChart">
             <div className="container">
                 <div className="lineChart__flex">
                     <div className="lineChart__box">
                         <div className="lineChart__item">
-                            {/* <Line data={{
-                                labels: casesLabel,
-                                datasets: [
-                                    {
-                                        label: 'Cases',
-                                data: casesValues,
-                                fill: false,
-                                backgroundColor: 'rgb(255, 99, 132)',
-                                borderColor: 'rgba(255, 99, 132, 0.2)',
-                                },
-                                ],
-                                scales: {
-                                    yAxes: [
+                            {
+                                history ? 
+                                <Line data={{
+                                    labels: Object.keys(history.cases),
+                                    datasets: [
                                         {
-                                        ticks: {
-                                            beginAtZero: true,
-                                        },
+                                            label: 'Cases',
+                                            data: Object.values(history.cases),
+                                            fill: false,
+                                            backgroundColor: 'rgba(238, 97, 97, 1)',
+                                            borderColor: 'rgba(238, 97, 97, 0.2',
                                         },
                                     ],
-                                },
-                            }}/>
-                        </div>
-                    </div>
-                    <div className="lineChart__box">
-                        <div className="lineChart__item">
-                            <Line data={{
-                                labels: deathsLabel,
-                                datasets: [
-                                {
-                                    label: 'Deaths',
-                                    data: deathsValues,
-                                    fill: false,
-                                    backgroundColor: '#283942',
-                                    borderColor: 'rgba(255, 99, 132, 0.2)',
-                                },
-                                ],
-                                scales: {
-                                    yAxes: [
-                                        {
-                                        ticks: {
-                                            beginAtZero: true,
-                                        },
-                                        },
-                                    ],
-                                },
-                            }}/>
-                        </div>
-                    </div>
-                    <div className="lineChart__box">
-                        <div className="lineChart__item">
-                            <Line data={{
-                                labels: recoveredLabel,
-                                datasets: [
-                                    {
-                                        data: recoveredValues,
-                                        fill: false,
-                                        backgroundColor: '#20AC76',
-                                        borderColor: 'rgba(255, 99, 132, 0.2)',
+                                    scales: {
+                                        yAxes: [
+                                            {
+                                                ticks: {
+                                                    beginAtZero: true,
+                                                },
+                                            },
+                                        ],
                                     },
-                                ],
-                                legend: { display: false },
-                                title: { display: true, text: 'Cases History for The Past Three Months'},
-                                scales: {
-                                    yAxes: [
+                                }}
+                                options={{
+                                    legend: { display: false },
+                                    title: { display: true, text: history.message ? history.message : 'Cases History for the Past Three Months' }
+                                }}
+                                    
+                                /> : null
+                            }
+                        </div>
+                    </div>
+                    <div className="lineChart__box">
+                        <div className="lineChart__item">
+                            {
+                                history ? 
+                                <Line data={{
+                                    labels: Object.keys(history.deaths),
+                                    datasets: [
                                         {
-                                        ticks: {
-                                            beginAtZero: true,
-                                        },
+                                            label: 'Cases',
+                                            data: Object.values(history.deaths),
+                                            fill: false,
+                                            backgroundColor: 'rgba(40, 57, 66, 1)',
+                                            borderColor: 'rgba(40, 57, 66, 0.2)',
                                         },
                                     ],
-                                },
-                            }}/> */}
+                                    scales: {
+                                        yAxes: [
+                                            {
+                                                ticks: {
+                                                    beginAtZero: true,
+                                                },
+                                            },
+                                        ],
+                                    },
+                                }}
+                                options={{
+                                    legend: { display: false },
+                                    title: { display: true, text: history.message ? history.message : 'Deaths History for the Past Three Months' }
+                                }}
+                                    
+                                /> : null
+                            }
+                        </div>
+                    </div>
+                    <div className="lineChart__box">
+                        <div className="lineChart__item">
+                            {
+                                history ? 
+                                <Line data={{
+                                    labels: Object.keys(history.recovered),
+                                    datasets: [
+                                        {
+                                            label: 'Cases',
+                                            data: Object.values(history.recovered),
+                                            fill: false,
+                                            backgroundColor: 'rgba(32, 127, 109, 1)',
+                                            borderColor: 'rgba(32, 127, 109, 0.2)',
+                                        },
+                                    ],
+                                    scales: {
+                                        yAxes: [
+                                            {
+                                                ticks: {
+                                                    beginAtZero: true,
+                                                },
+                                            },
+                                        ],
+                                    },
+                                }}
+                                options={{
+                                    legend: { display: false },
+                                    title: { display: true, text: history.message ? history.message : 'Recovered History for the Past Three Months' }
+                                }}
+                                    
+                                /> : null
+                            }
                         </div>
                     </div>
                 </div>

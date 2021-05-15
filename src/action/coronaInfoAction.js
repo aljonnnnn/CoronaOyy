@@ -35,3 +35,30 @@ export const getCountryData = (dispatch, country) => {
         // console.log(data)
     })
 }
+
+export const getHistoryData = (dispatch, country) => {
+
+    let url = 'https://corona.lmao.ninja/v3/covid-19/historical/all?lastdays=90'
+    if (country) {
+        url = `https://corona.lmao.ninja/v3/covid-19/historical/${country}?lastdays=90`
+    }
+
+    fetch(url)
+    .then(res => res.json())
+    .then(data => {
+        
+        if (data.timeline) {
+            setTimeout(() => {
+                dispatch({type: 'SET_HISTORY', payload: { cases: data.timeline.cases, deaths: data.timeline.deaths, recovered: data.timeline.recovered, message: null } })
+            }, 500)
+        } else if (data.message) {
+            setTimeout(() => {
+                dispatch({type: 'SET_HISTORY', payload: { cases: 0, deaths: 0, recovered: 0, message: data.message } })
+            }, 500)
+        } else {
+            setTimeout(() => {
+                dispatch({type: 'SET_HISTORY', payload: { cases: data.cases, deaths: data.deaths, recovered: data.recovered, message: null} })
+            }, 500)
+        }
+    })
+}

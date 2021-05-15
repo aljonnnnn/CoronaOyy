@@ -28,7 +28,7 @@ const CovidTracker = () => {
                 : 
                 <>
                     <BarChart />
-                    {/* <LineChart /> */}
+                    <LineChart />
                 </>
             }
          
