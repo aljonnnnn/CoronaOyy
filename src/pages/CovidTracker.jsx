@@ -6,7 +6,7 @@ import CountryPicker from "../containers/stateful-components/Home/Country-picker
 import Loading from '../containers/stateless-components/Loading/Loading'
 import LineChart from '../containers/stateful-components/Home/ChartJS/LineChart'
 import ApexChartBar from '../containers/stateful-components/Home/ApexChart/ApexChartBar'
-import { CoronaContext } from '../App'
+import { CoronaContext } from '../contexts/CoronaProvider'
 
 
 const CovidTracker = () => {

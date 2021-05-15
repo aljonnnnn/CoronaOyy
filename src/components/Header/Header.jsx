@@ -1,12 +1,12 @@
 import logo from '../../assets/img/coronaoyy.svg'
 import { NavLink, Link } from 'react-router-dom'
 import { useContext } from 'react'
-import { CoronaContext } from '../../App'
+import { CoronaContext } from '../../contexts/CoronaProvider'
 
 const Header = () => {
     const { state, dispatch } = useContext(CoronaContext)
     const { countriesName, currentCountryName } = state
-
+    // console.log('Header Render')
     const handleCountrySelector = (e) => {
         const countrySelected = e.target.value
         dispatch({ type: 'CHANGE_COUNTRY_NAME', payload: countrySelected})

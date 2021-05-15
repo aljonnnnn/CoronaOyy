@@ -1,6 +1,6 @@
 import { useContext } from 'react'
+import { CoronaContext } from '../../../../contexts/CoronaProvider'
 import ReactApexChart from 'react-apexcharts'
-import { CoronaContext } from '../../../../App'
 
 const ApexChartBar = () => {
     

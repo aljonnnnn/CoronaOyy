@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { CoronaContext } from '../../../../App'
+import { CoronaContext } from '../../../../contexts/CoronaProvider'
 
 const CountryPicker = () => {
     const {state, dispatch} = useContext(CoronaContext)

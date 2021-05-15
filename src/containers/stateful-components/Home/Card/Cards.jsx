@@ -1,6 +1,7 @@
 import { useContext } from 'react'
+import { CoronaContext } from '../../../../contexts/CoronaProvider'
 import CountUp from 'react-countup'
-import { CoronaContext } from '../../../../App'
+
 const Cards = () => {
     const { state } = useContext(CoronaContext)
     const { currentCountryName, global, country } = state

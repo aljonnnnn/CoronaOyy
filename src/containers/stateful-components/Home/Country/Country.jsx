@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { CoronaContext } from '../../../../App';
+import { CoronaContext } from '../../../../contexts/CoronaProvider';
 import globalICon from '../../../../assets/img/global.svg'
 
 const Country = () => {
