@@ -1,5 +1,5 @@
 .lineChart {
-    padding: 20px 0;
+    padding: 1.25rem 0;
 
     &__flex {
         display: flex;
@@ -15,7 +15,7 @@
         padding-right: 0.9375rem;
         
         &:not(:last-child) {
-            margin-bottom: 70px;
+            margin-bottom: 4.375rem;
         }
 
         @media (max-width: $medium) {
