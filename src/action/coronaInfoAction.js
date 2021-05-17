@@ -3,11 +3,9 @@ export const getCountryName = (dispatch) => {
     .then(res => res.json())
     .then(data => {
         dispatch({type: 'GET_COUNTRIES', payload: data.map(country => country.country)})
-        // console.log()
+        // console.log(data)
     })
-    .catch(error => {
-        console.log(error)
-    })
+    .catch(error => console.log(error))
 }
 
 export const getGlobalData = (dispatch) => {
@@ -21,6 +19,7 @@ export const getGlobalData = (dispatch) => {
         }, 500);
         // console.log(data)
     })
+    .catch(error => console.log(error))
 }
 
 export const getCountryData = (dispatch, country) => {
@@ -34,6 +33,7 @@ export const getCountryData = (dispatch, country) => {
         }, 500)
         // console.log(data)
     })
+    .catch(error => console.log(error))
 }
 
 export const getHistoryData = (dispatch, country) => {
@@ -61,4 +61,5 @@ export const getHistoryData = (dispatch, country) => {
             }, 500)
         }
     })
+    .catch(error => console.log(error))
 }
