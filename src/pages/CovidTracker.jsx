@@ -47,7 +47,7 @@ const CovidTracker = () => {
                     </>
                 }
     
-                <button onClick={() => Increment()}>Increment</button>
+                {/* <button onClick={() => Increment()}>Increment</button> */}
              
             </main>
         )
