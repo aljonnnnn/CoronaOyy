@@ -53,7 +53,7 @@ const LineChart = () => {
                                         labels: Object.keys(history.deaths),
                                         datasets: [
                                             {
-                                                label: 'Cases',
+                                                label: 'Deaths',
                                                 data: Object.values(history.deaths),
                                                 fill: false,
                                                 backgroundColor: 'rgba(40, 57, 66, 1)',
@@ -87,7 +87,7 @@ const LineChart = () => {
                                         labels: Object.keys(history.recovered),
                                         datasets: [
                                             {
-                                                label: 'Cases',
+                                                label: 'Recovered',
                                                 data: Object.values(history.recovered),
                                                 fill: false,
                                                 backgroundColor: 'rgba(32, 127, 109, 1)',
