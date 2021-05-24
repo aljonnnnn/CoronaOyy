@@ -23,13 +23,6 @@ const AboutHero = () => {
                             <motion.img 
                                 initial={{ opacity: 0 , y: -100, rotate: -45}}
                                 animate={{ opacity: 1, y: 0, rotate: 0, transition: { duration: 1}}}
-                                drag 
-                                dragConstraints={{
-                                    top: 0,
-                                    left: 0,
-                                    right: 0,
-                                    bottom: 0,
-                                }}
                                 whileTap={{ scale: 0.9 }} 
                                 whileHover={{ scale: 1.5, rotate: 45 }} 
                                 className="AboutHero__virusICon-1" src={virusIcon1} alt=""/>
@@ -37,13 +30,6 @@ const AboutHero = () => {
                             <motion.img 
                                 initial={{ opacity: 0 , y: -100, rotate: -45}}
                                 animate={{ opacity: 1, y: 0, rotate: 0, transition: { duration: 1}}}
-                                drag 
-                                dragConstraints={{
-                                    top: 0,
-                                    left: 0,
-                                    right: 0,
-                                    bottom: 0,
-                                }}
                                 whileTap={{ scale: 0.9 }} 
                                 whileHover={{ scale: 1.1, rotate: 95 }} 
                                 className="AboutHero__virusICon-2" src={virusIcon2} alt=""/>
@@ -51,13 +37,6 @@ const AboutHero = () => {
                             <motion.img 
                                 initial={{ opacity: 0 , x: 100, rotate: -45, scale: 0}}
                                 animate={{ opacity: 1, x: 0, rotate: 0, scale: 1, transition: { duration: 1}}}
-                                drag 
-                                dragConstraints={{
-                                    top: 0,
-                                    left: 0,
-                                    right: 0,
-                                    bottom: 0,
-                                }}
                                 whileTap={{ scale: 1.1 }} 
                                 whileHover={{ scale: 0.9, rotate: -45 }}
                                 className="AboutHero__virusICon-3" src={virusIcon3} alt=""/>
@@ -65,13 +44,6 @@ const AboutHero = () => {
                             <motion.img 
                                 initial={{ opacity: 0 , y: 100, rotate: -45}}
                                 animate={{ opacity: 1, y: 0, rotate: 0, transition: { duration: 1}}}
-                                drag 
-                                dragConstraints={{
-                                    top: 0,
-                                    left: 0,
-                                    right: 0,
-                                    bottom: 0,
-                                }}
                                 whileTap={{ scale: 0.9 }} 
                                 whileHover={{ scale: 1.5, rotate: 45 }} 
                                 className="AboutHero__virusICon-4" src={virusIcon4} alt=""/>
@@ -82,13 +54,6 @@ const AboutHero = () => {
                 <motion.img 
                     initial={{ opacity: 0 , y: 100, rotate: -45}}
                     animate={{ opacity: 1, y: 0, rotate: 0, transition: { duration: 1}}}
-                    drag 
-                    dragConstraints={{
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
-                    }}
                     whileTap={{ scale: 0.9 }} 
                     whileHover={{ scale: 1.5, rotate: 45 }} 
                     className="AboutHero__virusICon-5" src={virusIcon5} alt=""/>

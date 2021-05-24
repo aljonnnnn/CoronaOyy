@@ -13,52 +13,24 @@ const AboutYoutube = () => {
                 <motion.img 
                     initial={{ opacity: 0 , x: -100, rotate: -45}}
                     animate={{ opacity: 1, x: 0, rotate: 0, transition: { duration: 1}}}
-                    drag 
-                    dragConstraints={{
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
-                    }}
                     whileTap={{ scale: 0.9 }} 
                     whileHover={{ scale: 1.5, rotate: 45 }} 
                     className="AboutYoutube__virusICon-1" src={virusIcon1} alt=""/>
                 <motion.img 
                     initial={{ opacity: 0 , x: -100, rotate: -45}}
                     animate={{ opacity: 1, x: 0, rotate: 0, transition: { duration: 1}}}
-                    drag 
-                    dragConstraints={{
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
-                    }}
                     whileTap={{ scale: 0.9 }} 
                     whileHover={{ scale: 1.5, rotate: 45 }} 
                     className="AboutYoutube__virusICon-2" src={virusIcon2} alt=""/>
                 <motion.img 
                     initial={{ opacity: 0 , x: 100, rotate: -45}}
                     animate={{ opacity: 1, x: 0, rotate: 0, transition: { duration: 1}}}
-                    drag 
-                    dragConstraints={{
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
-                    }}
                     whileTap={{ scale: 0.9 }} 
                     whileHover={{ scale: 1.5, rotate: 45 }} 
                     className="AboutYoutube__virusICon-3" src={virusIcon3} alt=""/>
                 <motion.img 
                     initial={{ opacity: 0 , x: 100, rotate: -45}}
                     animate={{ opacity: 1, x: 0, rotate: 0, transition: { duration: 1}}}
-                    drag 
-                    dragConstraints={{
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
-                    }}
                     whileTap={{ scale: 0.9 }} 
                     whileHover={{ scale: 1.5, rotate: 45 }} 
                     className="AboutYoutube__virusICon-4" src={virusIcon4} alt=""/>
