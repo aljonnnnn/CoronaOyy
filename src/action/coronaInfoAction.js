@@ -1,43 +1,40 @@
 export const getCountryName = async(dispatch) => {
-    try {
-        const response = await fetch('https://disease.sh/v3/covid-19/countries')
-        const data = await response.json()
-        // console.log(data.map(data => data.country))
+    fetch('https://disease.sh/v3/covid-19/countries')
+    .then(response => response.json())
+    .then(data => {
         dispatch({type: 'GET_COUNTRIES', payload: data.map(data => data.country)})
-    }
-    catch(error) {
+    })
+    .catch(error => {
         console.log(error)
-    }
+    })
 }
 
 export const getGlobalData = async(dispatch) => {
-    try {
+    fetch('https://disease.sh/v3/covid-19/all')
+    .then(response => response.json())
+    .then(data => {
         dispatch({type: 'SET_LOADING'})
-        const response = await fetch('https://disease.sh/v3/covid-19/all')
-        const data = await response.json()
-        // console.log(data)
         setTimeout(() => {
             dispatch({type: 'GET_GLOBAL_DATA', payload: {cases: data.cases, deaths: data.deaths, recovered: data.recovered, active: data.active}})
         }, 500)
-    }
-    catch(error) {
+    })
+    .catch(error => {
         console.log(error)
-    }
+    })
 }
 
 export const getCountryData = async(dispatch, country) => {
-    try {
+    fetch('https://disease.sh/v3/covid-19/countries/' + country)
+    .then(response => response.json())
+    .then(data => {
         dispatch({type: 'SET_LOADING'})
-        const response = await fetch('https://disease.sh/v3/covid-19/countries/' + country)
-        const data = await response.json()
-        // console.log(data)
         setTimeout(()  => {
             dispatch({ type: 'GET_COUNTRY_DATA', payload: {cases: data.cases, deaths: data.deaths, recovered: data.recovered, active: data.active, flag: data.countryInfo.flag}})
         }, 500)
-    }
-    catch(error) {
+    })
+    .catch(error => {
         console.log(error)
-    }
+    })
 }
 
 export const getHistoryData = async(dispatch, country) => {
@@ -47,17 +44,12 @@ export const getHistoryData = async(dispatch, country) => {
         url = `https://corona.lmao.ninja/v3/covid-19/historical/${country}?lastdays=90`
     }
 
-    try {
-        const response = await fetch(url)
-        const data = await response.json()
-        // console.log(response.status)
-        // console.log(data)
-
-        if (response.status !== 200) {
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        if (data.message) {
             throw new Error('Country not found or doesn\'t have any historical data')
-        }
-
-        if (data.timeline) {
+        } else if (data.timeline) {
             setTimeout(() => {
                 dispatch({type: 'SET_HISTORY', payload: {cases: data.timeline.cases, deaths: data.timeline.deaths, recovered: data.timeline.recovered, message: null}})
             }, 500)
@@ -66,11 +58,11 @@ export const getHistoryData = async(dispatch, country) => {
                 dispatch({type: 'SET_HISTORY', payload: {cases: data.cases, deaths: data.deaths, recovered: data.recovered, message: null}})
             }, 500)
         }
-    }
-    catch(error) {
-        console.log(error.message)
+    })
+    .catch(error => {
+        console.log(error)
         setTimeout(() => {
-            dispatch({type: 'SET_HISTORY', payload: { cases: 0, deaths: 0, recovered: 0, message: error.message} })
+            dispatch({type: 'SET_HISTORY', payload: { cases: 0, deaths: 0, recovered: 0, message: error.message } })
         }, 500)
-    }
+    })
 }
