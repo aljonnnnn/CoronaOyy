@@ -4,12 +4,14 @@ import { CoronaContext } from "../../../../contexts/CoronaProvider"
 
 const LineChart = () => {
     const { state } = useContext(CoronaContext)
-    const { history } = state
+    console.log(state)
+    const { history, historyError } = state
 
     return useMemo(() => {
         return (
             <div className="lineChart">
                 <div className="container">
+                    {historyError ? <h2 className="text-center">This {historyError}</h2> : null}
                     <div className="lineChart__flex">
                         <div className="lineChart__box">
                             <div className="lineChart__item">

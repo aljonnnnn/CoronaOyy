@@ -60,7 +60,8 @@ export const getHistoryData = async(dispatch, country) => {
         }
     })
     .catch(error => {
-        console.log(error)
+        // console.log(error)
+        dispatch({type: 'SET_HISTORY_ERROR', payload: error.message})
         setTimeout(() => {
             dispatch({type: 'SET_HISTORY', payload: { cases: 0, deaths: 0, recovered: 0, message: error.message } })
         }, 500)

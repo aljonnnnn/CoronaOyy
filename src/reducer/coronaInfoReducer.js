@@ -3,9 +3,9 @@ export const infoInitialState = {
     country: null,
     global: null,
     currentCountryName: null,
-    error: null,
     loading: false,
     history: null,
+    historyError: null,
 }
 
 
@@ -33,7 +33,9 @@ export const coronaInfoReducer = (state, {type, payload}) => {
         case 'CHANGE_COUNTRY_NAME' :
             return {
                 ...state,
-                currentCountryName: payload
+                currentCountryName: payload,
+                historyError: null
+
             }
         case 'SET_LOADING' :
             return {
@@ -44,6 +46,11 @@ export const coronaInfoReducer = (state, {type, payload}) => {
             return {
                 ...state,
                 history : payload,
+            }
+        case 'SET_HISTORY_ERROR' : 
+            return {
+                ...state,
+                historyError: payload
             }
         default: 
             return state
