@@ -12,20 +12,6 @@ const CovidTracker = () => {
     const { state } = useContext(CoronaContext)
     const { loading } = state
 
-
-    // my app is optimize :)
-    // uncomment button jsx element then increment button in line 50 and console.log in line 28   // if you request new data in country or global component will re-render
-    // each dispatch request has own render
-    // keep learning :)
-
-    const [count, setCount] = useState(0)
-
-    const Increment = () => {
-        setCount(preCount => preCount + 1)
-    }
-
-    // console.log(count)
-
     return useMemo(() => {
         return(
             <main className='main'>
@@ -45,8 +31,6 @@ const CovidTracker = () => {
                         <LineChart />
                     </>
                 }
-    
-                {/* <button onClick={() => Increment()}>Increment</button> */}
              
             </main>
         )
