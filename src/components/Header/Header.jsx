@@ -1,14 +1,14 @@
 import logo from '../../assets/img/coronaoyy.svg'
 import { NavLink, Link } from 'react-router-dom'
 import { useCallback, useContext, useMemo } from 'react'
-import { CoronaContext } from '../../contexts/CoronaProvider'
+import { CoronaContext } from '../../contexts/provider/CoronaProvider'
 
 const Header = () => {
     const { state, dispatch } = useContext(CoronaContext)
-    const { countriesName, currentCountryName } = state
+    const { countriesName, countrySelected } = state
     const handleCountrySelector = useCallback((e) => {
         const countrySelected = e.target.value
-        dispatch({ type: 'CHANGE_COUNTRY_NAME', payload: countrySelected})
+        dispatch({ type: 'CHANGE_COUNTRY_SELECT', payload: countrySelected})
     }, [dispatch])
 
     return useMemo(() => {
@@ -22,7 +22,7 @@ const Header = () => {
                         <li className='header__item'><NavLink to="/about" activeClassName="active" className='header__link'>About Covid</NavLink></li>
                     </ul>
                     <form className='header__form'>
-                        <select className='header__select' value={currentCountryName ? currentCountryName : 'Global'} onChange={handleCountrySelector}>
+                        <select className='header__select' value={countrySelected ? countrySelected : 'Global'} onChange={handleCountrySelector}>
                             <option className='header__option' value='' >Global</option>
                             {countriesName.map(name => <option className='header__option' value={name} key={name} >{name}</option>)}
                         </select>
@@ -30,7 +30,7 @@ const Header = () => {
                 </nav>
             </header>
         )
-    }, [countriesName, currentCountryName, handleCountrySelector])
+    }, [countriesName, countrySelected, handleCountrySelector])
 }
 
 export default Header

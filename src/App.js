@@ -4,7 +4,7 @@ import Footer from './components/Footer/Footer';
 import './styles/main.scss'
 import CovidTracker from './pages/CovidTracker';
 import AboutCovid from './pages/AboutCovid';
-import CoronaProvider from './contexts/CoronaProvider';
+import CoronaProvider from './contexts/provider/CoronaProvider';
 
 function App() {
 

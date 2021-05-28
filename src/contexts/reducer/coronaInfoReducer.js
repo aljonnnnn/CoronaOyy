@@ -1,8 +1,8 @@
-export const infoInitialState = {
+export const coronaInfoState = {
     countriesName: [],
     country: null,
     global: null,
-    currentCountryName: null,
+    countrySelected: null,
     loading: false,
     history: null,
     historyError: null,
@@ -30,10 +30,10 @@ export const coronaInfoReducer = (state, {type, payload}) => {
                 country: payload,
                 loading: false,
             }
-        case 'CHANGE_COUNTRY_NAME' :
+        case 'CHANGE_COUNTRY_SELECT' :
             return {
                 ...state,
-                currentCountryName: payload,
+                countrySelected: payload,
                 historyError: null
 
             }

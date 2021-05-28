@@ -4,7 +4,7 @@ import BarChart from "../containers/stateful-components/Home/ChartJS/BarChart"
 import Country from "../containers/stateful-components/Home/Country/Country"
 import Loading from '../containers/stateless-components/Loading/Loading'
 import LineChart from '../containers/stateful-components/Home/ChartJS/LineChart'
-import { CoronaContext } from '../contexts/CoronaProvider'
+import { CoronaContext } from '../contexts/provider/CoronaProvider'
 import CountryPicker from "../containers/stateful-components/Home/Country-picker/CountryPicker"
 
 

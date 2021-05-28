@@ -1,12 +1,12 @@
 import { useContext, useMemo } from 'react'
-import { CoronaContext } from '../../../../contexts/CoronaProvider'
 import CountUp from 'react-countup'
+import { CoronaContext } from '../../../../contexts/provider/CoronaProvider'
 
 const Cards = () => {
     const { state } = useContext(CoronaContext)
-    const { currentCountryName, global, country } = state
+    const { countrySelected, global, country } = state
     
-    const data = currentCountryName ? country : global
+    const data = countrySelected ? country : global
 
     const date = new Date().toLocaleDateString()
 
