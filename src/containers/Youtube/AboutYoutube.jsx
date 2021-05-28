@@ -1,7 +1,7 @@
-import virusIcon1 from '../../../../assets/img/virus-youtube-img-1.svg'
-import virusIcon2 from '../../../../assets/img/virus-youtube-img-2.svg'
-import virusIcon3 from '../../../../assets/img/virus-youtube-img-3.svg'
-import virusIcon4 from '../../../../assets/img/virus-youtube-img-4.svg'
+import virusIcon1 from '../../assets/img/virus-youtube-img-1.svg'
+import virusIcon2 from '../../assets/img/virus-youtube-img-2.svg'
+import virusIcon3 from '../../assets/img/virus-youtube-img-3.svg'
+import virusIcon4 from '../../assets/img/virus-youtube-img-4.svg'
 import { motion } from 'framer-motion'
 
 const AboutYoutube = () => {

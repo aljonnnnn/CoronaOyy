@@ -1,6 +1,6 @@
 import { useContext, useMemo } from "react"
 import { Line } from "react-chartjs-2"
-import { CoronaContext } from "../../../../contexts/provider/CoronaProvider"
+import { CoronaContext } from "../../contexts/provider/CoronaProvider"
 
 const LineChart = () => {
     const { state } = useContext(CoronaContext)

@@ -1,11 +1,10 @@
-import { useContext, useMemo, useState } from 'react'
-import Cards from "../containers/stateful-components/Home/Card/Cards"
-import BarChart from "../containers/stateful-components/Home/ChartJS/BarChart"
-import Country from "../containers/stateful-components/Home/Country/Country"
-import Loading from '../containers/stateless-components/Loading/Loading'
-import LineChart from '../containers/stateful-components/Home/ChartJS/LineChart'
+import { useContext, useMemo, } from 'react'
+import Loading from '../containers/Loading/Loading'
 import { CoronaContext } from '../contexts/provider/CoronaProvider'
-import CountryPicker from "../containers/stateful-components/Home/Country-picker/CountryPicker"
+import Cards from '../components/Card/Cards'
+import Country from '../components/Country/Country'
+import BarChart from '../components/ChartJS/BarChart'
+import LineChart from '../components/ChartJS/LineChart'
 
 
 const CovidTracker = () => {

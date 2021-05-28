@@ -1,5 +1,5 @@
 import { useCallback, useContext, useMemo } from 'react'
-import { CoronaContext } from '../../../../contexts/provider/CoronaProvider'
+import { CoronaContext } from '../../contexts/provider/CoronaProvider'
 
 const CountryPicker = () => {
     const {state, dispatch} = useContext(CoronaContext)

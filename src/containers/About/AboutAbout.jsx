@@ -1,10 +1,9 @@
-// import AboutAboutImg from '../../img/AboutAboutImg.png'
-import AboutAboutImg from '../../../../assets/img/AboutAboutImg.png'
-import virusIcon1 from '../../../../assets/img/virus-about-img-1.svg'
-import virusIcon2 from '../../../../assets/img/virus-about-img-2.svg'
-import virusIcon3 from '../../../../assets/img/virus-about-img-3.svg'
-import virusIcon4 from '../../../../assets/img/virus-about-img-4.svg'
-import virusIcon5 from '../../../../assets/img/virus-about-img-5.svg'
+import AboutAboutImg from '../../assets/img/AboutAboutImg.png'
+import virusIcon1 from '../../assets/img/virus-about-img-1.svg'
+import virusIcon2 from '../../assets/img/virus-about-img-2.svg'
+import virusIcon3 from '../../assets/img/virus-about-img-3.svg'
+import virusIcon4 from '../../assets/img/virus-about-img-4.svg'
+import virusIcon5 from '../../assets/img/virus-about-img-5.svg'
 import { motion } from 'framer-motion'
 
 

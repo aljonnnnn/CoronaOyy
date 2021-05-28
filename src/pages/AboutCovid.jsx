@@ -1,8 +1,9 @@
-import AboutAbout from "../containers/stateless-components/About/About/AboutAbout"
-import AboutAccordion from "../containers/stateless-components/About/Accordion/AboutAccordion"
-import AboutHero from "../containers/stateless-components/About/Hero/AboutHero"
-import AboutSymtoms from "../containers/stateless-components/About/Symptoms/AboutSymptoms"
-import AboutYoutube from "../containers/stateless-components/About/Youtube/AboutYoutube"
+import AboutAbout from "../containers/About/AboutAbout"
+import AboutAccordion from "../containers/Accordion/AboutAccordion"
+import AboutHero from "../containers/Hero/AboutHero"
+import AboutSymtoms from "../containers/Symptoms/AboutSymptoms"
+import AboutYoutube from "../containers/Youtube/AboutYoutube"
+
 
 const AboutCovid = () => {
     return (

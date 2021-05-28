@@ -1,6 +1,6 @@
 import { useContext, useMemo } from 'react';
-import globalICon from '../../../../assets/img/global.svg'
-import { CoronaContext } from '../../../../contexts/provider/CoronaProvider';
+import globalICon from '../../assets/img/global.svg'
+import { CoronaContext } from '../../contexts/provider/CoronaProvider';
 
 const Country = () => {
     const {state} = useContext(CoronaContext)

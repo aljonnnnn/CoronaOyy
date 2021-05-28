@@ -1,6 +1,6 @@
 import { useContext, useMemo } from 'react'
 import CountUp from 'react-countup'
-import { CoronaContext } from '../../../../contexts/provider/CoronaProvider'
+import { CoronaContext } from '../../contexts/provider/CoronaProvider'
 
 const Cards = () => {
     const { state } = useContext(CoronaContext)
