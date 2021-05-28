@@ -119,7 +119,7 @@ const LineChart = () => {
                 </div>
             </div>
         )
-    }, [history])
+    }, [history, historyError])
 }
 
 export default LineChart

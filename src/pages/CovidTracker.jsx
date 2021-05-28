@@ -5,7 +5,6 @@ import Country from "../containers/stateful-components/Home/Country/Country"
 import Loading from '../containers/stateless-components/Loading/Loading'
 import LineChart from '../containers/stateful-components/Home/ChartJS/LineChart'
 import { CoronaContext } from '../contexts/CoronaProvider'
-import ApexChartBar from '../containers/stateful-components/Home/ApexChart/ApexChartBar'
 import CountryPicker from "../containers/stateful-components/Home/Country-picker/CountryPicker"
 
 
