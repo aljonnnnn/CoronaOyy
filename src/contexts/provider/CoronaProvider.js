@@ -1,6 +1,6 @@
 import { createContext, useEffect, useReducer } from "react"
-import { getCountryData, getCountryName, getGlobalData, getHistoryData } from "../action/coronaInfoAction"
 import { coronaInfoReducer, coronaInfoState } from "../reducer/coronaInfoReducer"
+import { fetchCountryData, fetchCountryName, fetchGlobalData, fetchHistoryData } from "../utils/util"
 
 export const CoronaContext = createContext()
 
@@ -9,12 +9,12 @@ const CoronaProvider = ({children}) => {
     const { countrySelected } = state
     
     useEffect(() => {
-        getCountryName(dispatch)
-        getHistoryData(dispatch, countrySelected)
+        fetchCountryName(dispatch)
+        fetchHistoryData(dispatch, countrySelected)
         if (countrySelected) {
-            getCountryData(dispatch, countrySelected)
+            fetchCountryData(dispatch, countrySelected)
         } else {
-            getGlobalData(dispatch)
+            fetchGlobalData(dispatch)
         }
     }, [countrySelected])
     

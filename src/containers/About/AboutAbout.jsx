@@ -8,7 +8,6 @@ import { motion } from 'framer-motion'
 
 
 const AboutAbout = () => {
-
     return (
         <motion.section 
             className="AboutAbout" id='About'>

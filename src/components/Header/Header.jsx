@@ -2,13 +2,14 @@ import logo from '../../assets/img/coronaoyy.svg'
 import { NavLink, Link } from 'react-router-dom'
 import { useCallback, useContext, useMemo } from 'react'
 import { CoronaContext } from '../../contexts/provider/CoronaProvider'
+import { changeCountrySelected } from '../../contexts/action/coronaInfoAction'
 
 const Header = () => {
     const { state, dispatch } = useContext(CoronaContext)
     const { countriesName, countrySelected } = state
     const handleCountrySelector = useCallback((e) => {
         const countrySelected = e.target.value
-        dispatch({ type: 'CHANGE_COUNTRY_SELECT', payload: countrySelected})
+        dispatch(changeCountrySelected(countrySelected))
     }, [dispatch])
 
     return useMemo(() => {

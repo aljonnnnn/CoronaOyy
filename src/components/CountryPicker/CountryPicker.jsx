@@ -1,4 +1,5 @@
 import { useCallback, useContext, useMemo } from 'react'
+import { changeCountrySelected } from '../../contexts/action/coronaInfoAction'
 import { CoronaContext } from '../../contexts/provider/CoronaProvider'
 
 const CountryPicker = () => {
@@ -6,7 +7,7 @@ const CountryPicker = () => {
     const {countriesName, countrySelected} = state
     const handleCountrySelector = useCallback((e) => {
         const countrySelected = e.target.value
-        dispatch({ type: 'CHANGE_COUNTRY_SELECT', payload: countrySelected})
+        dispatch(changeCountrySelected(countrySelected))
     },[dispatch] )
 
     return useMemo(() => {

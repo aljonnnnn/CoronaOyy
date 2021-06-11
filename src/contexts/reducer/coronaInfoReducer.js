@@ -1,4 +1,4 @@
-import { CHANGE_COUNTRY_SELECT, GET_COUNTRIES, GET_COUNTRY_DATA, GET_GLOBAL_DATA, SET_HISTORY, SET_HISTORY_ERROR, SET_LOADING } from "../types/coronaInfoTypes"
+import { CHANGE_COUNTRY_SELECT, GET_COUNTRY_DATA, GET_COUNTRY_NAME, GET_GLOBAL_DATA, GET_HISTORY_DATA, SET_HISTORY_ERROR, SET_LOADING } from "../types/coronaInfoTypes"
 
 export const coronaInfoState = {
     countriesName: [],
@@ -13,7 +13,7 @@ export const coronaInfoState = {
 
 export const coronaInfoReducer = (state, {type, payload}) => {
     switch(type) {
-        case GET_COUNTRIES :
+        case GET_COUNTRY_NAME :
             return {
                 ...state,
                 countriesName: payload,
@@ -44,7 +44,7 @@ export const coronaInfoReducer = (state, {type, payload}) => {
                 ...state,
                 loading: true
             }
-        case SET_HISTORY :
+        case GET_HISTORY_DATA:
             return {
                 ...state,
                 history : payload,
