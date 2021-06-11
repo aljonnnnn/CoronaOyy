@@ -1,6 +1,6 @@
 import { createContext, useEffect, useReducer } from "react"
 import { coronaInfoReducer, coronaInfoState } from "../reducer/coronaInfoReducer"
-import { fetchCountryData, fetchCountryName, fetchGlobalData, fetchHistoryData } from "../utils/util"
+import { fetchCountryData, fetchCountryName, fetchGlobalData, fetchHistoryData } from "../utils/coronaInfoUtils"
 
 export const CoronaContext = createContext()
 
