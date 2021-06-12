@@ -4,12 +4,10 @@ import Footer from './components/Footer/Footer';
 import './styles/main.scss'
 import CovidTracker from './pages/CovidTracker';
 import AboutCovid from './pages/AboutCovid';
-import CoronaProvider from './contexts/provider/CoronaProvider';
 
 function App() {
 
   return (
-    <CoronaProvider>
       <Router>
         <Header />
           <Switch>
@@ -18,7 +16,6 @@ function App() {
           </Switch>
         <Footer />
       </Router>
-    </CoronaProvider>
   );
 
 }

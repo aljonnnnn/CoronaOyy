@@ -1,21 +1,40 @@
-import { useContext, useMemo, } from 'react'
+import { useMemo, } from 'react'
 import Loading from '../containers/Loading/Loading'
-import { CoronaContext } from '../contexts/provider/CoronaProvider'
 import Cards from '../components/Card/Cards'
 import Country from '../components/Country/Country'
 import BarChart from '../components/ChartJS/BarChart'
 import LineChart from '../components/ChartJS/LineChart'
+import CountryPicker from '../components/CountryPicker/CountryPicker'
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import { fetchCountriesName } from '../redux/countries/countriesUtils'
+import { setSelectedCountry } from '../redux/covidData/covidDataActions'
+import { fetchHistoryData } from '../redux/historyData/historyDataUtils'
+import { fetchCountryData } from '../redux/covidData/covidDataUtils'
+import { fetchGlobalData } from '../redux/covidData/covidDataUtils'
 
 
 const CovidTracker = () => {
-    const { state } = useContext(CoronaContext)
-    const { loading } = state
+    const selectedCountry = useSelector(state => state.covidData.selectedCountry)
+    const dispatch = useDispatch()
+    const loadingCovidData = useSelector(state => state.covidData.loading)
+    const loadingHistoryData = useSelector(state => state.historyData.loading)
+    useEffect(() => {
+        dispatch(fetchCountriesName())
+        dispatch(setSelectedCountry(selectedCountry))
+        dispatch(fetchHistoryData(selectedCountry))
+        if (selectedCountry) {
+            dispatch(fetchCountryData(selectedCountry))
+        } else {
+            dispatch(fetchGlobalData())
+        }
+    }, [dispatch, selectedCountry])
 
     return useMemo(() => {
         return(
             <main className='main'>
                 
-                {loading ? <Loading /> 
+                {loadingCovidData ? <Loading /> 
                     : 
                     <div>
                         <Country />
@@ -23,7 +42,7 @@ const CovidTracker = () => {
                         {/* <CountryPicker /> */}
                     </div>}
     
-                {loading ? <Loading /> 
+                {loadingHistoryData && loadingCovidData ? <Loading /> 
                     : 
                     <>
                         <BarChart />
@@ -33,7 +52,7 @@ const CovidTracker = () => {
              
             </main>
         )
-    }, [loading])
+    }, [loadingHistoryData, loadingCovidData])
 }
 
 export default CovidTracker

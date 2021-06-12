@@ -1,13 +1,10 @@
-import { useContext, useMemo } from 'react';
+import { useMemo } from 'react';
 import { Bar } from 'react-chartjs-2'
-import { CoronaContext } from '../../contexts/provider/CoronaProvider';
+import { useSelector } from 'react-redux';
 
 const BarChart = () => {
-    const { state } = useContext(CoronaContext)
-    const { currentCountryName, country, global } = state
-    const data = currentCountryName ? country : global
-    // console.log(data)
-
+    const {selectedCountry, globalData, countryData} = useSelector(state => state.covidData)
+    const data = selectedCountry ? countryData : globalData
     return useMemo(() => {
         return (
             <div className="BarChart text-center">
@@ -38,7 +35,7 @@ const BarChart = () => {
                     }} 
                     options={{
                         legend: { display: false },
-                        title: { display: true, text: `Current state in ${currentCountryName ? currentCountryName : 'Global'}` },
+                        title: { display: true, text: `Current state in ${selectedCountry ? selectedCountry : 'Global'}` },
                         scales: {
                             yAxes: [
                                 {
@@ -53,7 +50,7 @@ const BarChart = () => {
                 </div>
             </div>
         )
-    }, [data, currentCountryName])
+    }, [data, selectedCountry])
 }
 
 export default BarChart

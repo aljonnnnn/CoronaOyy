@@ -1,0 +1,19 @@
+state = {
+    countries: {
+        countriesName:,
+        loading:,
+        error:,
+    }
+    covidData: {
+        globalData:,
+        countryData:,
+        loading:,
+        error:
+        countrySelected:
+    }
+    historyData: {
+        historyData:,
+        loading:,
+        error:
+    }
+}

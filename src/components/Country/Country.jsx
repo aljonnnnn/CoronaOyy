@@ -1,10 +1,9 @@
-import { useContext, useMemo } from 'react';
+import { useMemo } from 'react';
+import { useSelector } from 'react-redux';
 import globalICon from '../../assets/img/global.svg'
-import { CoronaContext } from '../../contexts/provider/CoronaProvider';
 
 const Country = () => {
-    const {state} = useContext(CoronaContext)
-    const { country } = state
+    const country = useSelector(state => state.covidData.countryData)    
     
     return useMemo(() => {
         return (

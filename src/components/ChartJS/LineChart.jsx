@@ -1,17 +1,15 @@
-import { useContext, useMemo } from "react"
+import { useMemo } from "react"
 import { Line } from "react-chartjs-2"
-import { CoronaContext } from "../../contexts/provider/CoronaProvider"
+import { useSelector } from "react-redux"
 
 const LineChart = () => {
-    const { state } = useContext(CoronaContext)
-    // console.log(state)
-    const { history, historyError } = state
+    const { history, error } = useSelector(state => state.historyData)
 
     return useMemo(() => {
         return (
             <div className="lineChart">
                 <div className="container">
-                    {historyError ? <h2 className="text-center">This {historyError}</h2> : null}
+                    {error ? <h2 className="text-center">This {error}</h2> : null}
                     <div className="lineChart__flex">
                         <div className="lineChart__box">
                             <div className="lineChart__item">
@@ -119,7 +117,7 @@ const LineChart = () => {
                 </div>
             </div>
         )
-    }, [history, historyError])
+    }, [history, error])
 }
 
 export default LineChart

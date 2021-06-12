@@ -1,13 +1,11 @@
-import { useContext, useMemo } from 'react'
+import { useMemo } from 'react'
 import CountUp from 'react-countup'
-import { CoronaContext } from '../../contexts/provider/CoronaProvider'
+import { useSelector } from 'react-redux'
 
 const Cards = () => {
-    const { state } = useContext(CoronaContext)
-    const { countrySelected, global, country } = state
+    const {selectedCountry, globalData, countryData} = useSelector(state => state.covidData)
     
-    const data = countrySelected ? country : global
-
+    const data = selectedCountry ? countryData : globalData
     const date = new Date().toLocaleDateString()
 
     return useMemo(() => {
