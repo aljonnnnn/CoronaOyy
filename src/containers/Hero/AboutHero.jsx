@@ -14,7 +14,7 @@ const AboutHero = () => {
                         <div className="AboutHero__item">
                             <span className='AboutHero__sub-title'>Covid-19 Alert</span>
                             <h1 className='AboutHero__title'>Stay Safe, Stay Home</h1>
-                            <p className="AboutHero__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nibh maecenas ut ipsum est nisl elit gravida. Non est dictum egestas tincidunt suspendisse nulla. Mauris vel nullam proin ornare in donec curabitur. Nunc nulla in euismod tellus senectus sem.</p>
+                            <p className="AboutHero__paragraph">The virus that causes COVID-19 is mainly transmitted through droplets generated when an infected person coughs, sneezes, or exhales. These droplets are too heavy to hang in the air, and quickly fall on floors or surfaces.</p>
                             <a href="#about" className='AboutHero__btn'>More Info</a>
                         </div>
                     </div>

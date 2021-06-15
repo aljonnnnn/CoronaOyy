@@ -3,14 +3,22 @@ import { NavLink, Link } from 'react-router-dom'
 import { useMemo } from 'react'
 import { setSelectedCountry } from '../../redux/covidData/covidDataActions'
 import { useDispatch, useSelector } from 'react-redux'
-import { useState } from 'react'
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 const Header = () => {
     const [country, setCountry] = useState('')
     const dispatch = useDispatch()
     const { selectedCountry } = useSelector(state => state.covidData)
     const { countriesName } = useSelector(state => state.countries)
+
+    useEffect(() => {
+        const countryLocal = localStorage.getItem('country')
+        if (countryLocal) setCountry(countryLocal)
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem('country', country)
+    }, [country])
 
     useEffect(() => {
         dispatch(setSelectedCountry(country))
