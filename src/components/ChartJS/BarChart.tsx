@@ -1,13 +1,20 @@
 import * as React from 'react';
 import { Bar } from 'react-chartjs-2';
 import { useSelector } from 'react-redux';
+import {
+  ICountryCovidData,
+  IGlobalCovidData,
+} from '../../redux/covidData/interface';
 import { RootState } from '../../redux/store';
 
 const BarChart = () => {
   const { selectedCountry, globalData, countryData } = useSelector(
     (state: RootState) => state.covidData
   );
-  const data = selectedCountry ? countryData : globalData;
+  const data: ICountryCovidData | IGlobalCovidData = selectedCountry
+    ? countryData
+    : globalData;
+
   return React.useMemo(() => {
     return (
       <div className="BarChart text-center">

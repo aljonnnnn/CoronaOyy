@@ -1,5 +1,5 @@
 export interface IGlobalCovidData {
-  active: string;
+  active: number;
   cases: number;
   critical: number;
   deaths: number;
