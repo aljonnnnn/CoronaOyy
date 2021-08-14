@@ -8,3 +8,7 @@ CoronaOyy is a web application that tracks the current Covid-19 cases all over t
 - Redux
 - Redux-thunk
 - sass/scss
+
+## Warning
+
+overkill redux, typescript and html :)
