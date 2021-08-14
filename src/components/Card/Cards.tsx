@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import * as React from 'react';
 import CountUp from 'react-countup';
 import { useSelector } from 'react-redux';
 
@@ -10,7 +10,7 @@ const Cards = () => {
   const data = selectedCountry ? countryData : globalData;
   const date = new Date().toLocaleDateString();
 
-  return useMemo(() => {
+  return React.useMemo(() => {
     return (
       <div className="card">
         {data && (

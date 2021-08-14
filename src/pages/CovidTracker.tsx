@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import * as React from 'react';
 import Loading from '../containers/Loading/Loading';
 import Cards from '../components/Card/Cards';
 import Country from '../components/Country/Country';
@@ -33,7 +33,7 @@ const CovidTracker = () => {
     }
   }, [dispatch, selectedCountry]);
 
-  return useMemo(() => {
+  return React.useMemo(() => {
     return (
       <main className="main">
         {loadingCovidData ? (

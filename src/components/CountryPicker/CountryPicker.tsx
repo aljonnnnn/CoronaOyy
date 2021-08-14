@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from 'react';
+import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSelectedCountry } from '../../redux/covidData/covidDataActions';
 
@@ -7,7 +7,7 @@ const CountryPicker = () => {
   const { countriesName } = useSelector((state: any) => state.countries);
   const dispatch = useDispatch();
 
-  const handleCountrySelector = useCallback(
+  const handleCountrySelector = React.useCallback(
     (e) => {
       const countrySelected = e.target.value;
       dispatch(setSelectedCountry(countrySelected));
@@ -15,7 +15,7 @@ const CountryPicker = () => {
     [dispatch]
   );
 
-  return useMemo(() => {
+  return React.useMemo(() => {
     return (
       <form action="" className="country-picker text-center">
         <select

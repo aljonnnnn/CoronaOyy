@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import * as React from 'react';
 import { Bar } from 'react-chartjs-2';
 import { useSelector } from 'react-redux';
 
@@ -7,7 +7,7 @@ const BarChart = () => {
     (state: any) => state.covidData
   );
   const data = selectedCountry ? countryData : globalData;
-  return useMemo(() => {
+  return React.useMemo(() => {
     return (
       <div className="BarChart text-center">
         <div className="container">

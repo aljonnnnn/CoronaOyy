@@ -1,11 +1,11 @@
-import { useMemo } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import globalICon from '../../assets/img/global.svg';
 
 const Country = () => {
   const country = useSelector((state: any) => state.covidData.countryData);
 
-  return useMemo(() => {
+  return React.useMemo(() => {
     return (
       <div className="country">
         <span className="country__name">

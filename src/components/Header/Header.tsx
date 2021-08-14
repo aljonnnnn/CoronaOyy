@@ -1,6 +1,6 @@
 import logo from '../../assets/img/coronaoyy.svg';
 import { NavLink, Link } from 'react-router-dom';
-import { useMemo } from 'react';
+import * as React from 'react';
 import { setSelectedCountry } from '../../redux/covidData/covidDataActions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
@@ -24,7 +24,7 @@ const Header = () => {
     dispatch(setSelectedCountry(country));
   }, [country, dispatch]);
 
-  return useMemo(() => {
+  return React.useMemo(() => {
     return (
       <header className="header">
         <nav className="header__nav container">

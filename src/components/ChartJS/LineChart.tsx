@@ -1,11 +1,11 @@
-import { useMemo } from 'react';
+import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { useSelector } from 'react-redux';
 
 const LineChart = () => {
   const { history, error } = useSelector((state: any) => state.historyData);
 
-  return useMemo(() => {
+  return React.useMemo(() => {
     return (
       <div className="lineChart">
         <div className="container">
