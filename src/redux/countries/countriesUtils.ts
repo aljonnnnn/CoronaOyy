@@ -11,7 +11,6 @@ export const fetchCountriesName = () => {
       .then((response) => response.json())
       .then((data) => {
         const allName = data.map((countries: any) => countries.country);
-        console.log(allName);
         dispatch(countriesNameSuccess(allName));
       })
       .catch((error) => {

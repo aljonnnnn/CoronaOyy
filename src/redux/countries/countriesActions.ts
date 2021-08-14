@@ -4,20 +4,26 @@ import {
   FETCH_COUNTRIES_NAME_SUCCESS,
 } from './countriesTypes';
 
-export const countriesNameSuccess = (allName: any) => {
+export const countriesNameSuccess = (
+  allName: any
+): { type: typeof FETCH_COUNTRIES_NAME_SUCCESS; payload: any } => {
   return {
     type: FETCH_COUNTRIES_NAME_SUCCESS,
     payload: allName,
   };
 };
 
-export const countriesNameRequest = () => {
+export const countriesNameRequest = (): {
+  type: typeof FETCH_COUNTRIES_NAME_REQUEST;
+} => {
   return {
     type: FETCH_COUNTRIES_NAME_REQUEST,
   };
 };
 
-export const countriesNameFailure = (message: any) => {
+export const countriesNameFailure = (
+  message: any
+): { type: typeof FETCH_COUNTRIES_NAME_ERROR; payload: any } => {
   return {
     type: FETCH_COUNTRIES_NAME_ERROR,
     payload: message,

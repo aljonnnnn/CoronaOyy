@@ -17,7 +17,7 @@ const CovidTracker = () => {
   const selectedCountry = useSelector(
     (state: RootState) => state.covidData.selectedCountry
   );
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useDispatch();
   const loadingCovidData = useSelector(
     (state: RootState) => state.covidData.loading
   );

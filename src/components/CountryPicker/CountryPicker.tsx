@@ -8,7 +8,7 @@ const CountryPicker = () => {
     (state: RootState) => state.covidData
   );
   const { countriesName } = useSelector((state: RootState) => state.countries);
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useDispatch();
 
   const handleCountrySelector = React.useCallback(
     (e) => {

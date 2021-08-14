@@ -7,7 +7,7 @@ import { AppDispatch, RootState } from '../../redux/store';
 
 const Header = () => {
   const [country, setCountry] = React.useState('');
-  const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useDispatch();
   const { selectedCountry } = useSelector(
     (state: RootState) => state.covidData
   );
