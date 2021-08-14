@@ -4,7 +4,7 @@ import {
   historyRequest,
 } from './historyDataActions';
 
-export const fetchHistoryData = (countrySelected: any) => {
+export const fetchHistoryData = (countrySelected: string) => {
   return (dispatch: any) => {
     let url =
       'https://corona.lmao.ninja/v3/covid-19/historical/all?lastdays=90';
