@@ -4,13 +4,30 @@ import {
   FETCH_COUNTRIES_NAME_SUCCESS,
 } from './countriesTypes';
 
-const initialState = {
+interface ICountriesState {
+  countriesName: string[];
+  loading: boolean;
+  error: string;
+}
+
+interface ICountriesAction {
+  type:
+    | typeof FETCH_COUNTRIES_NAME_REQUEST
+    | typeof FETCH_COUNTRIES_NAME_ERROR
+    | typeof FETCH_COUNTRIES_NAME_SUCCESS;
+  payload: any;
+}
+
+const initialState: ICountriesState = {
   countriesName: [],
   loading: false,
   error: '',
 };
 
-export const countriesNameReducer = (state = initialState, action: any) => {
+export const countriesNameReducer = (
+  state: ICountriesState = initialState,
+  action: ICountriesAction
+) => {
   switch (action.type) {
     case FETCH_COUNTRIES_NAME_REQUEST:
       return {

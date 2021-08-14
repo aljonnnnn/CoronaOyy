@@ -6,7 +6,25 @@ import {
   SET_SELECTED_COUNTRY,
 } from './covidDataTypes';
 
-const initialState = {
+interface ICovidDataState {
+  selectedCountry: string;
+  globalData: null;
+  countryData: null;
+  loading: boolean;
+  error: string;
+}
+
+interface ICovidDataAction {
+  type:
+    | typeof FETCH_COUNTRY_DATA_SUCCESS
+    | typeof FETCH_COVID_DATA_ERROR
+    | typeof FETCH_COVID_DATA_REQUEST
+    | typeof FETCH_GLOBAL_DATA_SUCCESS
+    | typeof SET_SELECTED_COUNTRY;
+  payload: any;
+}
+
+const initialState: ICovidDataState = {
   selectedCountry: '',
   globalData: null,
   countryData: null,
@@ -14,7 +32,10 @@ const initialState = {
   error: '',
 };
 
-export const covidDataReducer = (state = initialState, action: any) => {
+export const covidDataReducer = (
+  state: ICovidDataState = initialState,
+  action: ICovidDataAction
+) => {
   switch (action.type) {
     case SET_SELECTED_COUNTRY:
       return {

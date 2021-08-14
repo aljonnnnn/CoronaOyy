@@ -3,14 +3,29 @@ import {
   FETCH_HISTORY_DATA_REQUEST,
   FETCH_HISTORY_DATA_SUCCESS,
 } from './historyDataTypes';
+interface IHistoryDataState {
+  history: null;
+  loading: boolean;
+  error: string;
+}
 
-const initialState = {
+interface IHistoryDataAction {
+  type:
+    | typeof FETCH_HISTORY_DATA_ERROR
+    | typeof FETCH_HISTORY_DATA_REQUEST
+    | typeof FETCH_HISTORY_DATA_SUCCESS;
+  payload: any;
+}
+const initialState: IHistoryDataState = {
   history: null,
   loading: false,
   error: '',
 };
 
-export const historyDataReducer = (state = initialState, action: any) => {
+export const historyDataReducer = (
+  state: IHistoryDataState = initialState,
+  action: IHistoryDataAction
+) => {
   switch (action.type) {
     case FETCH_HISTORY_DATA_SUCCESS:
       return {
