@@ -1,26 +1,28 @@
+import * as React from 'react';
 import logo from '../../assets/img/coronaoyy.svg';
 import { NavLink, Link } from 'react-router-dom';
-import * as React from 'react';
 import { setSelectedCountry } from '../../redux/covidData/covidDataActions';
 import { useDispatch, useSelector } from 'react-redux';
-import { useState, useEffect } from 'react';
+import { AppDispatch, RootState } from '../../redux/store';
 
 const Header = () => {
-  const [country, setCountry] = useState('');
-  const dispatch = useDispatch();
-  const { selectedCountry } = useSelector((state: any) => state.covidData);
-  const { countriesName } = useSelector((state: any) => state.countries);
+  const [country, setCountry] = React.useState('');
+  const dispatch = useDispatch<AppDispatch>();
+  const { selectedCountry } = useSelector(
+    (state: RootState) => state.covidData
+  );
+  const { countriesName } = useSelector((state: RootState) => state.countries);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const countryLocal = localStorage.getItem('country');
     if (countryLocal) setCountry(countryLocal);
   }, []);
 
-  useEffect(() => {
+  React.useEffect(() => {
     localStorage.setItem('country', country);
   }, [country]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     dispatch(setSelectedCountry(country));
   }, [country, dispatch]);
 

@@ -1,10 +1,11 @@
 import * as React from 'react';
 import { Bar } from 'react-chartjs-2';
 import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/store';
 
 const BarChart = () => {
   const { selectedCountry, globalData, countryData } = useSelector(
-    (state: any) => state.covidData
+    (state: RootState) => state.covidData
   );
   const data = selectedCountry ? countryData : globalData;
   return React.useMemo(() => {

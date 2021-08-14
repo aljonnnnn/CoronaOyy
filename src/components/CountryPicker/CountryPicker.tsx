@@ -1,11 +1,14 @@
 import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSelectedCountry } from '../../redux/covidData/covidDataActions';
+import { AppDispatch, RootState } from '../../redux/store';
 
 const CountryPicker = () => {
-  const { selectedCountry } = useSelector((state: any) => state.covidData);
-  const { countriesName } = useSelector((state: any) => state.countries);
-  const dispatch = useDispatch();
+  const { selectedCountry } = useSelector(
+    (state: RootState) => state.covidData
+  );
+  const { countriesName } = useSelector((state: RootState) => state.countries);
+  const dispatch = useDispatch<AppDispatch>();
 
   const handleCountrySelector = React.useCallback(
     (e) => {

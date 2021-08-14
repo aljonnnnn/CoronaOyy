@@ -1,9 +1,12 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import globalICon from '../../assets/img/global.svg';
+import { RootState } from '../../redux/store';
 
 const Country = () => {
-  const country = useSelector((state: any) => state.covidData.countryData);
+  const country = useSelector(
+    (state: RootState) => state.covidData.countryData
+  );
 
   return React.useMemo(() => {
     return (

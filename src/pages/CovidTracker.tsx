@@ -6,23 +6,25 @@ import BarChart from '../components/ChartJS/BarChart';
 import LineChart from '../components/ChartJS/LineChart';
 import CountryPicker from '../components/CountryPicker/CountryPicker';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
 import { fetchCountriesName } from '../redux/countries/countriesUtils';
 import { setSelectedCountry } from '../redux/covidData/covidDataActions';
 import { fetchHistoryData } from '../redux/historyData/historyDataUtils';
 import { fetchCountryData } from '../redux/covidData/covidDataUtils';
 import { fetchGlobalData } from '../redux/covidData/covidDataUtils';
+import { AppDispatch, RootState } from '../redux/store';
 
 const CovidTracker = () => {
   const selectedCountry = useSelector(
-    (state: any) => state.covidData.selectedCountry
+    (state: RootState) => state.covidData.selectedCountry
   );
-  const dispatch = useDispatch();
-  const loadingCovidData = useSelector((state: any) => state.covidData.loading);
+  const dispatch = useDispatch<AppDispatch>();
+  const loadingCovidData = useSelector(
+    (state: RootState) => state.covidData.loading
+  );
   const loadingHistoryData = useSelector(
-    (state: any) => state.historyData.loading
+    (state: RootState) => state.historyData.loading
   );
-  useEffect(() => {
+  React.useEffect(() => {
     dispatch(fetchCountriesName());
     dispatch(setSelectedCountry(selectedCountry));
     dispatch(fetchHistoryData(selectedCountry));

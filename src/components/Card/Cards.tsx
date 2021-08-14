@@ -1,13 +1,16 @@
 import * as React from 'react';
 import CountUp from 'react-countup';
 import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/store';
 
 const Cards = () => {
   const { selectedCountry, globalData, countryData } = useSelector(
-    (state: any) => state.covidData
+    (state: RootState) => state.covidData
   );
 
   const data = selectedCountry ? countryData : globalData;
+  // console.log(countryData, 'country');
+  // console.log(globalData, 'global');
   const date = new Date().toLocaleDateString();
 
   return React.useMemo(() => {

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import * as React from 'react';
 
 const data = [
   {
@@ -108,7 +108,7 @@ const up = (
 );
 
 const AboutAccordion = () => {
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = React.useState(null);
 
   const accordionToggler = (index: any) => {
     if (selected === index) {

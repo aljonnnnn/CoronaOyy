@@ -1,9 +1,12 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/store';
 
 const LineChart = () => {
-  const { history, error } = useSelector((state: any) => state.historyData);
+  const { history, error } = useSelector(
+    (state: RootState) => state.historyData
+  );
 
   return React.useMemo(() => {
     return (
