@@ -14,7 +14,7 @@ import { fetchGlobalData } from '../redux/covidData/covidDataUtils';
 import { AppDispatch, RootState } from '../redux/store';
 
 const CovidTracker = () => {
-  const selectedCountry = useSelector(
+  const selectedCountry: string = useSelector(
     (state: RootState) => state.covidData.selectedCountry
   );
   const dispatch = useDispatch();

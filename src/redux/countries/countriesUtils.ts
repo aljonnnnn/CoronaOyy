@@ -10,7 +10,9 @@ export const fetchCountriesName = () => {
     fetch('https://disease.sh/v3/covid-19/countries')
       .then((response) => response.json())
       .then((data) => {
-        const allName = data.map((countries: any) => countries.country);
+        const allName: string[] = data.map(
+          (countries: any) => countries.country
+        );
         dispatch(countriesNameSuccess(allName));
       })
       .catch((error) => {

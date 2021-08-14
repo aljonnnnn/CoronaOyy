@@ -5,8 +5,8 @@ import {
 } from './countriesTypes';
 
 export const countriesNameSuccess = (
-  allName: any
-): { type: typeof FETCH_COUNTRIES_NAME_SUCCESS; payload: any } => {
+  allName: string[]
+): { type: typeof FETCH_COUNTRIES_NAME_SUCCESS; payload: string[] } => {
   return {
     type: FETCH_COUNTRIES_NAME_SUCCESS,
     payload: allName,
@@ -22,8 +22,8 @@ export const countriesNameRequest = (): {
 };
 
 export const countriesNameFailure = (
-  message: any
-): { type: typeof FETCH_COUNTRIES_NAME_ERROR; payload: any } => {
+  message: string
+): { type: typeof FETCH_COUNTRIES_NAME_ERROR; payload: string } => {
   return {
     type: FETCH_COUNTRIES_NAME_ERROR,
     payload: message,

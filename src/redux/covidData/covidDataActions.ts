@@ -5,18 +5,19 @@ import {
   FETCH_GLOBAL_DATA_SUCCESS,
   SET_SELECTED_COUNTRY,
 } from './covidDataTypes';
+import { ICountryCovidData, IGlobalCovidData } from './interface';
 
 export const setSelectedCountry = (
-  country: any
-): { type: typeof SET_SELECTED_COUNTRY; payload: any } => {
+  country: string
+): { type: typeof SET_SELECTED_COUNTRY; payload: string } => {
   return {
     type: SET_SELECTED_COUNTRY,
     payload: country,
   };
 };
 export const globalData = (
-  globalData: any
-): { type: typeof FETCH_GLOBAL_DATA_SUCCESS; payload: any } => {
+  globalData: IGlobalCovidData
+): { type: typeof FETCH_GLOBAL_DATA_SUCCESS; payload: IGlobalCovidData } => {
   return {
     type: FETCH_GLOBAL_DATA_SUCCESS,
     payload: globalData,
@@ -24,8 +25,8 @@ export const globalData = (
 };
 
 export const countryData = (
-  countryData: any
-): { type: typeof FETCH_COUNTRY_DATA_SUCCESS; payload: any } => {
+  countryData: ICountryCovidData
+): { type: typeof FETCH_COUNTRY_DATA_SUCCESS; payload: ICountryCovidData } => {
   return {
     type: FETCH_COUNTRY_DATA_SUCCESS,
     payload: countryData,
@@ -41,8 +42,8 @@ export const covidDataRequest = (): {
 };
 
 export const covidDataError = (
-  message: any
-): { type: typeof FETCH_COVID_DATA_ERROR; payload: any } => {
+  message: string
+): { type: typeof FETCH_COVID_DATA_ERROR; payload: string } => {
   return {
     type: FETCH_COVID_DATA_ERROR,
     payload: message,

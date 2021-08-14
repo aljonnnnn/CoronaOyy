@@ -12,7 +12,7 @@ const CountryPicker = () => {
 
   const handleCountrySelector = React.useCallback(
     (e) => {
-      const countrySelected = e.target.value;
+      const countrySelected: string = e.target.value;
       dispatch(setSelectedCountry(countrySelected));
     },
     [dispatch]

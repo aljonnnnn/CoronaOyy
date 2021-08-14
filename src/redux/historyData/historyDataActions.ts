@@ -7,6 +7,7 @@ import {
 export const historyData = (
   data: any
 ): { type: typeof FETCH_HISTORY_DATA_SUCCESS; payload: any } => {
+  // console.log(data);
   return {
     type: FETCH_HISTORY_DATA_SUCCESS,
     payload: data,
@@ -22,8 +23,8 @@ export const historyRequest = (): {
 };
 
 export const historyError = (
-  message: any
-): { type: typeof FETCH_HISTORY_DATA_ERROR; payload: any } => {
+  message: string
+): { type: typeof FETCH_HISTORY_DATA_ERROR; payload: string } => {
   return {
     type: FETCH_HISTORY_DATA_ERROR,
     payload: message,
