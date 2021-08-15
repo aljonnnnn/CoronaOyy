@@ -108,7 +108,7 @@ const up = (
 );
 
 const AboutAccordion = () => {
-  const [selected, setSelected] = React.useState(null);
+  const [selected, setSelected] = React.useState<number | null>(null);
 
   const accordionToggler = (index: any) => {
     if (selected === index) {
