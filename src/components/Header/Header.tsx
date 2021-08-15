@@ -3,7 +3,7 @@ import logo from '../../assets/img/coronaoyy.svg';
 import { NavLink, Link } from 'react-router-dom';
 import { setSelectedCountry } from '../../redux/covidData/covidDataActions';
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from '../../redux/store';
+import { RootState } from '../../redux/store';
 
 const Header = () => {
   const [country, setCountry] = React.useState('');

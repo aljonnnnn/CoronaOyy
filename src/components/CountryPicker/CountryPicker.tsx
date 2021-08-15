@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSelectedCountry } from '../../redux/covidData/covidDataActions';
-import { AppDispatch, RootState } from '../../redux/store';
+import { RootState } from '../../redux/store';
 
 const CountryPicker = () => {
   const { selectedCountry } = useSelector(

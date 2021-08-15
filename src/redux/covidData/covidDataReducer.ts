@@ -5,11 +5,12 @@ import {
   FETCH_GLOBAL_DATA_SUCCESS,
   SET_SELECTED_COUNTRY,
 } from './covidDataTypes';
+import { ICountryCovidData, IGlobalCovidData } from './interface';
 
-interface ICovidDataState {
+export interface ICovidDataState {
   selectedCountry: string;
-  globalData: null;
-  countryData: null;
+  globalData: IGlobalCovidData | null;
+  countryData: ICountryCovidData | null;
   loading: boolean;
   error: string;
 }
