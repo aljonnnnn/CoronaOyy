@@ -59,7 +59,9 @@ const Header = () => {
             <select
               className="header__select"
               value={selectedCountry ? selectedCountry : 'Global'}
-              onChange={(e) => setCountry(e.target.value)}
+              onChange={(e: React.FormEvent<HTMLSelectElement>) =>
+                setCountry(e.currentTarget.value)
+              }
             >
               <option className="header__option" value="">
                 Global

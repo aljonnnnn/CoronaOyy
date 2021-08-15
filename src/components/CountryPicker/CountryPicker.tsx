@@ -11,8 +11,8 @@ const CountryPicker = () => {
   const dispatch = useDispatch();
 
   const handleCountrySelector = React.useCallback(
-    (e) => {
-      const countrySelected: string = e.target.value;
+    (e: React.FormEvent<HTMLSelectElement>) => {
+      const countrySelected: string = e.currentTarget.value;
       dispatch(setSelectedCountry(countrySelected));
     },
     [dispatch]
