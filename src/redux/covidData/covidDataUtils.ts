@@ -4,6 +4,7 @@ import {
   covidDataRequest,
   globalData,
 } from './covidDataActions';
+import { ICountryCovidData, IGlobalCovidData } from './interface';
 
 export const fetchGlobalData = () => {
   return (dispatch: any) => {
@@ -11,7 +12,7 @@ export const fetchGlobalData = () => {
     fetch('https://disease.sh/v3/covid-19/all')
       .then((response) => response.json())
       .then((data) => {
-        const Data = {
+        const Data: IGlobalCovidData = {
           cases: data.cases,
           deaths: data.deaths,
           recovered: data.recovered,
@@ -38,7 +39,7 @@ export const fetchCountryData = (country: any) => {
     fetch('https://disease.sh/v3/covid-19/countries/' + country)
       .then((response) => response.json())
       .then((data) => {
-        const Data = {
+        const Data: ICountryCovidData = {
           cases: data.cases,
           deaths: data.deaths,
           recovered: data.recovered,

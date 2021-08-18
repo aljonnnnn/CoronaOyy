@@ -7,9 +7,9 @@ import {
 } from './covidDataTypes';
 import { ICountryCovidData, IGlobalCovidData } from './interface';
 
-export const setSelectedCountry = (
-  country: string
-): { type: typeof SET_SELECTED_COUNTRY; payload: string } => {
+export const setSelectedCountry = <T>(
+  country: T
+): { type: typeof SET_SELECTED_COUNTRY; payload: T } => {
   return {
     type: SET_SELECTED_COUNTRY,
     payload: country,
@@ -41,9 +41,9 @@ export const covidDataRequest = (): {
   };
 };
 
-export const covidDataError = (
-  message: string
-): { type: typeof FETCH_COVID_DATA_ERROR; payload: string } => {
+export const covidDataError = <T>(
+  message: T
+): { type: typeof FETCH_COVID_DATA_ERROR; payload: T } => {
   return {
     type: FETCH_COVID_DATA_ERROR,
     payload: message,

@@ -4,9 +4,9 @@ import {
   FETCH_HISTORY_DATA_SUCCESS,
 } from './historyDataTypes';
 
-export const historyData = (
-  data: any
-): { type: typeof FETCH_HISTORY_DATA_SUCCESS; payload: any } => {
+export const historyData = <T>(
+  data: T
+): { type: typeof FETCH_HISTORY_DATA_SUCCESS; payload: T } => {
   // console.log(data);
   return {
     type: FETCH_HISTORY_DATA_SUCCESS,
@@ -22,9 +22,9 @@ export const historyRequest = (): {
   };
 };
 
-export const historyError = (
-  message: string
-): { type: typeof FETCH_HISTORY_DATA_ERROR; payload: string } => {
+export const historyError = <T>(
+  message: T
+): { type: typeof FETCH_HISTORY_DATA_ERROR; payload: T } => {
   return {
     type: FETCH_HISTORY_DATA_ERROR,
     payload: message,
